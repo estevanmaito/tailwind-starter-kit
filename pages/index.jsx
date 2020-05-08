@@ -1,8 +1,9 @@
 import Head from 'next/head'
+import Layout from '../containers/Layout'
 
-export default function Home() {
+function Home() {
   return (
-    <div className="container">
+    <Layout>
       <Head>
         <title>Windmill - Tailwind CSS starter kit</title>
         <link rel="icon" href="/favicon.ico" />
@@ -11,6 +12,8 @@ export default function Home() {
       <main></main>
 
       <footer></footer>
-    </div>
+    </Layout>
   )
 }
+
+export default Home
