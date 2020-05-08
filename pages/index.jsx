@@ -5,7 +5,7 @@ function Home() {
   return (
     <Layout>
       <Head>
-        <title>Windmill - Tailwind CSS starter kit</title>
+        <title>Tailwind CSS Starter Kit</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
