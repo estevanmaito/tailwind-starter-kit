@@ -6,8 +6,8 @@ function Navbar({ isOpen, setIsOpen }) {
     <header className="fixed inset-x-0 top-0 z-20 flex items-center max-w-screen-xl px-6 py-2 mx-auto text-gray-700 bg-white">
       {/* Logo */}
       <Link href="/">
-        <a className="flex items-center pr-6 lg:w-1/4 xl:w-1/5">
-          <span className="hidden font-bold sm:block">Tailwind Starter Kit</span>
+        <a className="flex items-center hidden pr-6 font-bold md:block lg:w-1/4 xl:w-1/5">
+          Tailwind Starter Kit
         </a>
       </Link>
 
