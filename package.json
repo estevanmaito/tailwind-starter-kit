@@ -1,7 +1,6 @@
 {
   "name": "tailwind-starter-kit",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,5 +16,20 @@
     "autoprefixer": "^9.7.6",
     "postcss-import": "^12.0.1",
     "tailwindcss": "^1.4.5"
-  }
+  },
+  "license": "MIT",
+  "keywords": [
+    "tailwind",
+    "css",
+    "starter",
+    "kit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estevanmaito/tailwind-starter-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/estevanmaito/tailwind-starter-kit/issues"
+  },
+  "homepage": "https://github.com/estevanmaito/tailwind-starter-kit#readme"
 }
