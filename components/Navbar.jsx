@@ -64,7 +64,7 @@ function Navbar({ isOpen, setIsOpen }) {
       <div className="justify-end hidden pl-4 lg:flex lg:w-1/4 xl:w-1/5">
         <ul className="flex">
           <li>
-            <a href="https://github.com/estevanmaito/windmill" target="_blank">
+            <a href="https://github.com/estevanmaito/tailwind-starter-kit" target="_blank">
               <svg viewBox="0 0 16 16" className="w-6 h-6 fill-current hover:text-gray-600">
                 <path
                   fillRule="evenodd"
