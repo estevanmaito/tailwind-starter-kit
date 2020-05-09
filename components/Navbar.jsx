@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function Navbar({ isOpen, setIsOpen }) {
   return (
-    <header className="fixed inset-x-0 top-0 z-20 flex items-center max-w-screen-xl px-6 py-2 mx-auto text-gray-700 bg-white">
+    <header className="fixed inset-x-0 top-0 z-20 flex items-center h-16 max-w-screen-xl px-6 mx-auto text-gray-700 bg-white">
       {/* Logo */}
       <Link href="/">
         <a className="flex items-center hidden pr-6 font-bold md:block lg:w-1/4 xl:w-1/5">
