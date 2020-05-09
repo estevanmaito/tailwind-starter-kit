@@ -175,7 +175,7 @@ function Navbar(_ref) {
   var isOpen = _ref.isOpen,
       setIsOpen = _ref.setIsOpen;
   return __jsx("header", {
-    className: "fixed inset-x-0 top-0 z-20 flex items-center max-w-screen-xl px-6 py-2 mx-auto text-gray-700 bg-white",
+    className: "fixed inset-x-0 top-0 z-20 flex items-center h-16 max-w-screen-xl px-6 mx-auto text-gray-700 bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -449,7 +449,7 @@ function Sidebar(_ref) {
 
   var isOpen = _ref.isOpen;
   var router = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["useRouter"])();
-  var navClasses = isOpen ? 'w-full text-gray-600 lg:block lg:w-1/4 xl:w-1/5 bg-white z-10' : 'hidden w-full text-gray-600 lg:block lg:w-1/4 xl:w-1/5 bg-white z-10';
+  var navClasses = isOpen ? 'w-full fixed inset-0 pt-16 h-full text-gray-600 lg:block lg:w-1/4 xl:w-1/5 bg-white z-10' : 'hidden w-full text-gray-600 lg:block lg:w-1/4 xl:w-1/5 bg-white z-10';
   return __jsx("nav", {
     className: navClasses,
     __self: this,
@@ -458,20 +458,36 @@ function Sidebar(_ref) {
       lineNumber: 14,
       columnNumber: 5
     }
-  }, __jsx("h5", {
-    className: "text-xs font-bold tracking-normal text-gray-500 uppercase",
+  }, __jsx("div", {
+    className: "h-full overflow-y-auto scrolling-touch lg:fixed",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15,
       columnNumber: 7
     }
-  }, "Components"), __jsx("ul", {
+  }, __jsx("div", {
+    className: "p-6 overflow-y-auto lg:p-0",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16,
-      columnNumber: 7
+      columnNumber: 9
+    }
+  }, __jsx("h5", {
+    className: "text-xs font-bold tracking-normal text-gray-500 uppercase",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 11
+    }
+  }, "Components"), __jsx("ul", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 11
     }
   }, _routes__WEBPACK_IMPORTED_MODULE_1__["default"].map(function (r) {
     return __jsx("li", {
@@ -480,27 +496,27 @@ function Sidebar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18,
-        columnNumber: 11
+        lineNumber: 20,
+        columnNumber: 15
       }
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: r.url,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
-        columnNumber: 13
+        lineNumber: 23,
+        columnNumber: 17
       }
     }, __jsx("a", {
       className: "hover:text-gray-800",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22,
-        columnNumber: 15
+        lineNumber: 24,
+        columnNumber: 19
       }
     }, r.title)));
-  })));
+  })))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Sidebar);
@@ -597,12 +613,13 @@ function Layout(_ref) {
       isOpen = _useState[0],
       setIsOpen = _useState[1];
 
+  var mainClassName = isOpen ? 'fixed max-w-full min-h-screen overflow-hidden lg:relative lg:w-3/4 xl:w-3/5 xl:pl-12' : 'max-w-full lg:relative lg:w-3/4 xl:w-3/5 xl:pl-12';
   return __jsx("div", {
     className: "w-full px-6 mx-auto sm:max-w-screen-sm lg:max-w-screen-xl",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 13,
       columnNumber: 5
     }
   }, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -611,7 +628,7 @@ function Layout(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 14,
       columnNumber: 7
     }
   }), __jsx("div", {
@@ -619,7 +636,7 @@ function Layout(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 15,
       columnNumber: 7
     }
   }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -627,15 +644,15 @@ function Layout(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 16,
       columnNumber: 9
     }
   }), __jsx("div", {
-    className: "max-w-full min-h-screen overflow-hidden lg:relative lg:w-3/4 xl:w-3/5 xl:pl-12",
+    className: mainClassName,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 17,
       columnNumber: 9
     }
   }, children)));
