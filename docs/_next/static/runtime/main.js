@@ -4380,7 +4380,7 @@ var route_matcher_1 = __webpack_require__(/*! ./utils/route-matcher */ "./node_m
 
 var route_regex_1 = __webpack_require__(/*! ./utils/route-regex */ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js");
 
-var basePath =  false || '';
+var basePath = "/tailwind-starter-kit" || false;
 
 function addBasePath(path) {
   return path.indexOf(basePath) !== 0 ? basePath + path : path;
