@@ -16,7 +16,7 @@ function Sidebar({ isOpen }) {
       <ul>
         {routes.map((r) => (
           <li
-            className={router.pathname === r.url ? 'text-gray-800 font-semibold' : ''}
+            className={router.pathname.includes(r.url) ? 'text-gray-800 font-semibold' : ''}
             key={r.url}>
             <Link href={r.url}>
               <a className="hover:text-gray-800">{r.title}</a>
