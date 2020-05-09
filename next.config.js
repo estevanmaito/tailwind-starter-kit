@@ -4,5 +4,4 @@ module.exports = {
   experimental: {
     basePath: isProd ? '/tailwind-starter-kit' : '',
   },
-  assetPrefix: isProd ? '/tailwind-starter-kit' : '',
 }
