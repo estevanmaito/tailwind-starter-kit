@@ -46,7 +46,7 @@ function Home() {
             <div className="md:w-1/2">
               <img
                 className="w-full"
-                src="/undraw_product_teardown.svg"
+                src="/tailwind-starter-kit/undraw_product_teardown.svg"
                 alt="Smartphone with puzzle pieces"
               />
             </div>
