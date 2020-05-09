@@ -1,1 +1,0 @@
-self.__BUILD_MANIFEST = (function(a){return {"/docs/alerts":[a],"/docs/forms":[a]}}("static\u002Fchunks\u002F513bba3063b719ecefda8704614ef5d820598f5f.c45163857e53e2c3b00d.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()

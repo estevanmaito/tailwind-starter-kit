@@ -274,7 +274,7 @@ function Sidebar(_ref) {
     }
   }, _routes__WEBPACK_IMPORTED_MODULE_1__["default"].map(function (r) {
     return __jsx("li", {
-      className: router.pathname === r.url ? 'text-gray-800 font-semibold' : '',
+      className: router.pathname.includes(r.url) ? 'text-gray-800 font-semibold' : '',
       key: r.url,
       __self: _this,
       __source: {
@@ -5153,7 +5153,7 @@ function Home() {
       columnNumber: 9
     }
   })), __jsx("div", {
-    className: "w-full px-6 mx-auto sm:max-w-screen-sm lg:max-w-screen-xl",
+    className: "w-full px-6 mx-auto lg:max-w-screen-xl",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -5194,14 +5194,14 @@ function Home() {
       columnNumber: 13
     }
   }, __jsx("h1", {
-    className: "text-4xl font-bold tracking-tight text-center text-gray-700 md:text-left lg:text-5xl xl:text-6xl",
+    className: "mb-2 text-4xl font-bold tracking-tight text-center text-gray-700 md:text-left lg:text-5xl",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22,
       columnNumber: 15
     }
-  }, "Tailwind Start Kit"), __jsx("p", {
+  }, "Tailwind Starter Kit"), __jsx("p", {
     className: "max-w-md mx-auto mb-8 text-lg leading-normal text-center text-gray-700 md:mx-0 md:text-left",
     __self: this,
     __source: {
@@ -5233,55 +5233,49 @@ function Home() {
       lineNumber: 30,
       columnNumber: 19
     }
-  }, "Read docs")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    href: "/docs/alerts",
+  }, "Read docs")), __jsx("a", {
+    className: "inline-flex items-center px-4 py-2 font-bold text-gray-700 transition-colors duration-150 ease-in-out bg-gray-100 rounded-lg shadow-lg hover:bg-gray-200 focus:shadow-outline",
+    href: "https://twitter.com/intent/tweet?text=Tailwind Starter Kit - A library of components made with Tailwind CSS to bootstrap your projects&via=estevanmaito&url=https://estevanmaito.github.io/tailwind-starter-kit",
+    target: "_blank",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35,
       columnNumber: 17
     }
-  }, __jsx("a", {
-    className: "inline-flex items-center px-4 py-2 font-bold text-gray-700 transition-colors duration-150 ease-in-out bg-gray-100 rounded-lg shadow-lg hover:bg-gray-200 focus:shadow-outline",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 19
-    }
   }, __jsx("svg", {
     className: "h-4 mr-2 fill-current",
-    viewBox: "0 0 20 20",
+    viewBox: "0 0 24 24",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 21
+      lineNumber: 39,
+      columnNumber: 19
     }
   }, __jsx("path", {
-    d: "M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z",
+    d: "M8.2,20.2c6.5,0,11.7-5.2,11.8-11.6c0-0.1,0-0.1,0-0.2c0-0.2,0-0.4,0-0.5c0.8-0.6,1.5-1.3,2.1-2.2c-0.8,0.3-1.6,0.6-2.4,0.7c0.9-0.5,1.5-1.3,1.8-2.3c-0.8,0.5-1.7,0.8-2.6,1c-1.6-1.7-4.2-1.7-5.9-0.1c-1.1,1-1.5,2.5-1.2,3.9C8.5,8.7,5.4,7.1,3.3,4.6c-1.1,1.9-0.6,4.3,1.3,5.5c-0.7,0-1.3-0.2-1.9-0.5l0,0c0,2,1.4,3.7,3.3,4.1c-0.6,0.2-1.2,0.2-1.9,0.1c0.5,1.7,2.1,2.8,3.9,2.9c-1.7,1.4-3.9,2-6.1,1.7C3.8,19.5,6,20.2,8.2,20.2",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
-      columnNumber: 23
+      lineNumber: 40,
+      columnNumber: 21
     }
-  })), "Share")))), __jsx("div", {
+  })), "Share"))), __jsx("div", {
     className: "md:w-1/2",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 47,
       columnNumber: 13
     }
   }, __jsx("img", {
     className: "w-full",
-    src: "/undraw_product_teardown.svg",
+    src: "/tailwind-starter-kit/undraw_product_teardown.svg",
     alt: "Smartphone with puzzle pieces",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 48,
       columnNumber: 15
     }
   }))))));

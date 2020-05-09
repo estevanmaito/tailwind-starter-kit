@@ -475,7 +475,7 @@ function Sidebar(_ref) {
     }
   }, _routes__WEBPACK_IMPORTED_MODULE_1__["default"].map(function (r) {
     return __jsx("li", {
-      className: router.pathname === r.url ? 'text-gray-800 font-semibold' : '',
+      className: router.pathname.includes(r.url) ? 'text-gray-800 font-semibold' : '',
       key: r.url,
       __self: _this,
       __source: {
@@ -6261,7 +6261,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fdocs%2Fforms&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cdocs%5Cforms.jsx&hotRouterUpdates=true ***!
   \*********************************************************************************************************************************************/
@@ -6284,5 +6284,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=forms.js.map
