@@ -71,6 +71,20 @@ const buttonIconCode = `
 </button>
 `
 
+const dropdownLeftCode = `
+<div class="relative mb-32">
+  <button class="rounded-lg px-5 h-10 text-indigo-100 bg-indigo-700 focus:shadow-outline hover:bg-indigo-800 transition-colors duration-150 inline-flex items-center">
+    <span>Dropdown</span>
+    <svg class="fill-current h-4 w-4 ml-3" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+  </button>
+  <div class="absolute mt-1 py-2 rounded-lg flex flex-col bg-white text-gray-700 border">
+    <a class="px-3 py-1 hover:text-gray-800 focus:bg-indigo-700 focus:text-white" href="#">One item</a>
+    <a class="px-3 py-1 hover:text-gray-800 focus:bg-indigo-700 focus:text-white" href="#">Another longer item</a>
+    <a class="px-3 py-1 hover:text-gray-800 focus:bg-indigo-700 focus:text-white" href="#">A medium item</a>
+  </div>
+</div>
+`
+
 function Buttons() {
   return (
     <Layout>
@@ -130,6 +144,14 @@ function Buttons() {
         <H4>Icon button</H4>
         <P>Button with icon.</P>
         <CodeCard lang="html" code={buttonIconCode} />
+      </ExampleSection>
+
+      <ExampleSection id="dropdown-left">
+        <H4>Dropdown</H4>
+        <P>
+          Dropdown button with left aligned menu. <code>mb-32</code> added just for the example.
+        </P>
+        <CodeCard lang="html" code={dropdownLeftCode} />
       </ExampleSection>
     </Layout>
   )
