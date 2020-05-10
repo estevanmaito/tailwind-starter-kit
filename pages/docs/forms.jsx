@@ -125,21 +125,21 @@ const buttonRightInputCode = `
 const helperTextCode = `
 <div class="text-gray-700">
   <label class="block mb-1" for="forms-helpTextCode">Password</label>
-  <input class="border rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline" type="password" id="forms-helpTextCode">
-  <span class="text-xs text-gray-600">Your password must be at least 6 characters long.</span>
+  <input class="border rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline" type="password" id="forms-helpTextCode" aria-describedby="passwordHelp">
+  <span class="text-xs text-gray-600" id="passwordHelp">Your password must be at least 6 characters long.</span>
 </div>
 `
 
 const validationInputCode = `
 <div class="text-gray-700 mb-4">
   <label class="block mb-1" for="forms-validationInputCode_error">Password</label>
-  <input class="border border-red-700 rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline" type="password" id="forms-validationInputCode_error">
-  <span class="text-xs text-red-700">Your password is too short.</span>
+  <input class="border border-red-700 rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline" type="password" id="forms-validationInputCode_error" aria-describedby="passwordHelp">
+  <span class="text-xs text-red-700" id="passwordHelp">Your password is too short.</span>
 </div>
 <div class="text-gray-700">
   <label class="block mb-1" for="forms-validationInputCode_success">Password</label>
-  <input class="border border-green-500 rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline" type="password" id="forms-validationInputCode_success">
-  <span class="text-xs text-green-700">Your password is strong.</span>
+  <input class="border border-green-500 rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline" type="password" id="forms-validationInputCode_success" aria-describedby="passwordHelp">
+  <span class="text-xs text-green-700" id="passwordHelp">Your password is strong.</span>
 </div>
 `
 
