@@ -148,7 +148,7 @@ function Forms() {
     <Layout>
       <H2>Forms</H2>
       <Lead>Form components using Tailwind CSS to speed up your project.</Lead>
-      <hr className="mb-3" />
+      <hr className="my-8" />
 
       <ExampleSection id="simple-input">
         <H4>Simple input</H4>

@@ -68,7 +68,7 @@ function Alerts() {
     <Layout>
       <H2>Alerts</H2>
       <Lead>Alert components using Tailwind CSS to speed up your project.</Lead>
-      <hr className="mb-3" />
+      <hr className="my-8" />
 
       <ExampleSection id="simple">
         <H4>Simple</H4>

@@ -12,7 +12,7 @@ function Layout({ children }) {
   return (
     <div className="w-full px-6 mx-auto sm:max-w-screen-sm lg:max-w-screen-xl">
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className="flex mt-16">
+      <div className="flex mt-24">
         <Sidebar isOpen={isOpen} />
         <div className={mainClassName}>{children}</div>
       </div>

@@ -76,7 +76,7 @@ function Buttons() {
     <Layout>
       <H2>Buttons</H2>
       <Lead>Button components using Tailwind CSS to speed up your project.</Lead>
-      <hr className="mb-3" />
+      <hr className="my-8" />
 
       <ExampleSection id="button-sizes">
         <H4>Button sizes</H4>
