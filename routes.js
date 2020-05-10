@@ -7,4 +7,8 @@ export default [
     title: 'Forms',
     url: '/docs/forms',
   },
+  {
+    title: 'Buttons',
+    url: '/docs/buttons',
+  },
 ]
