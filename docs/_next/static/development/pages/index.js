@@ -5160,13 +5160,166 @@ function Home() {
       lineNumber: 15,
       columnNumber: 9
     }
-  }, "Tailwind CSS Starter Kit"), __jsx("link", {
-    rel: "icon",
-    href: "/favicon.ico",
+  }, "Tailwind CSS Starter Kit"), __jsx("meta", {
+    name: "description",
+    content: "A library of components made with Tailwind CSS to bootstrap your projects",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }), __jsx("link", {
+    rel: "canonical",
+    href: "https://estevanmaito.github.io/tailwind-starter-kit",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    name: "author",
+    content: "Nome do autor do site",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    name: "robots",
+    content: "index",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    itemprop: "name",
+    content: "Tailwind CSS Starter Kit",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    itemprop: "description",
+    content: "A library of components made with Tailwind CSS to bootstrap your projects",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    itemprop: "image",
+    content: "https://estevanmaito.github.io/tailwind-starter-kit/social.png",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    property: "og:title",
+    content: "Tailwind CSS Starter Kit",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    property: "og:description",
+    content: "A library of components made with Tailwind CSS to bootstrap your projects",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    property: "og:url",
+    content: "https://estevanmaito.github.io/tailwind-starter-kit",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    property: "og:type",
+    content: "website",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    property: "og:image",
+    content: "https://estevanmaito.github.io/tailwind-starter-kit/social.png",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    name: "twitter:title",
+    content: "Tailwind CSS Starter Kit",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    name: "twitter:description",
+    content: "A library of components made with Tailwind CSS to bootstrap your projects",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    name: "twitter:url",
+    content: "https://estevanmaito.github.io/tailwind-starter-kit",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    name: "twitter:card",
+    content: "summary_large_image",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    name: "twitter:image",
+    content: "https://estevanmaito.github.io/tailwind-starter-kit/social.png",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    name: "twitter:creator",
+    content: "@estevanmaito",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
       columnNumber: 9
     }
   })), __jsx("div", {
@@ -5174,7 +5327,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 61,
       columnNumber: 7
     }
   }, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -5183,7 +5336,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 62,
       columnNumber: 9
     }
   }), __jsx("div", {
@@ -5191,7 +5344,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 63,
       columnNumber: 9
     }
   }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -5199,7 +5352,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 64,
       columnNumber: 11
     }
   })), __jsx("div", {
@@ -5207,7 +5360,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 66,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -5215,7 +5368,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 67,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -5223,7 +5376,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 68,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -5231,7 +5384,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 69,
       columnNumber: 15
     }
   }, __jsx("h1", {
@@ -5239,7 +5392,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 70,
       columnNumber: 17
     }
   }, "Tailwind Starter Kit"), __jsx("p", {
@@ -5247,7 +5400,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 73,
       columnNumber: 17
     }
   }, "A library of components made with Tailwind CSS to bootstrap your projects"), __jsx("div", {
@@ -5255,7 +5408,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 76,
       columnNumber: 17
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -5263,7 +5416,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 77,
       columnNumber: 19
     }
   }, __jsx("a", {
@@ -5271,7 +5424,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 78,
       columnNumber: 21
     }
   }, "Read docs")), __jsx("a", {
@@ -5281,7 +5434,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 83,
       columnNumber: 19
     }
   }, __jsx("svg", {
@@ -5290,7 +5443,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 87,
       columnNumber: 21
     }
   }, __jsx("path", {
@@ -5298,7 +5451,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 88,
       columnNumber: 23
     }
   })), "Share"))), __jsx("div", {
@@ -5306,7 +5459,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 95,
       columnNumber: 15
     }
   }, __jsx("img", {
@@ -5316,7 +5469,7 @@ function Home() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 96,
       columnNumber: 17
     }
   })))))));
@@ -5345,7 +5498,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!**************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cindex.jsx&hotRouterUpdates=true ***!
   \**************************************************************************************************************************/
@@ -5368,5 +5521,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
