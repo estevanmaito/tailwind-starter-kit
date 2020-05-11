@@ -17,6 +17,13 @@ function Navbar({ isOpen, setIsOpen }) {
         {/* inset-y-0 will make it stick to top and bottom, like top: 0 and bottom: 0 */}
         <div className="w-full xl:pl-12">
           <div className="relative">
+            {/* Bigger pl to accommodate the icon */}
+            <input
+              type="text"
+              className="w-full py-2 pl-10 pr-4 placeholder-gray-600 transition-shadow duration-100 bg-gray-100 border border-gray-200 rounded-lg focus:bg-white focus:shadow-lg"
+              id="algolia-search"
+              placeholder="Search for components"
+            />
             <div className="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-600 pointer-events-none">
               {/* fill-current will make the SVG the same color as the current from parent */}
               <svg className="w-5 h-5 fill-current" viewBox="0 0 20 20">
@@ -26,12 +33,6 @@ function Navbar({ isOpen, setIsOpen }) {
                   fillRule="evenodd"></path>
               </svg>
             </div>
-            {/* Bigger pl to accommodate the icon */}
-            <input
-              className="w-full py-2 pl-10 pr-4 placeholder-gray-600 transition-shadow duration-100 bg-gray-100 border border-gray-200 rounded-lg focus:bg-white focus:shadow-lg"
-              id="algolia-search"
-              placeholder="Search for components"
-            />
           </div>
         </div>
       </div>
