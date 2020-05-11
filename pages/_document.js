@@ -14,6 +14,10 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
           />
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `.algolia-autocomplete { width: 100% !important; }`,
+            }}></style>
         </Head>
         <body>
           <Main />
