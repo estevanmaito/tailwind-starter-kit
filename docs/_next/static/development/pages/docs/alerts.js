@@ -174,12 +174,29 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function Navbar(_ref) {
   var isOpen = _ref.isOpen,
       setIsOpen = _ref.setIsOpen;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      isSearchDisabled = _useState[0],
+      setIsSearchDisabled = _useState[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (window.docsearch) {
+      window.docsearch({
+        apiKey: 'de0ea1927c3b929b1dd95baee343cfb4',
+        indexName: 'estevanmaito_tailwind-starter-kit',
+        inputSelector: '#algolia-search'
+      });
+    } else {
+      console.warn('Search has failed to load');
+      setIsSearchDisabled(true);
+    }
+  }, []);
   return __jsx("header", {
     className: "fixed inset-x-0 top-0 z-20 flex items-center h-16 max-w-screen-xl px-6 mx-auto text-gray-700 bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 21,
       columnNumber: 5
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -187,7 +204,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 23,
       columnNumber: 7
     }
   }, __jsx("a", {
@@ -195,7 +212,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 24,
       columnNumber: 9
     }
   }, "Tailwind Starter Kit")), __jsx("div", {
@@ -203,7 +220,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 30,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -211,7 +228,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 33,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -219,7 +236,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 34,
       columnNumber: 11
     }
   }, __jsx("input", {
@@ -227,10 +244,11 @@ function Navbar(_ref) {
     className: "w-full py-2 pl-10 pr-4 placeholder-gray-600 transition-shadow duration-100 bg-gray-100 border border-gray-200 rounded-lg focus:bg-white focus:shadow-lg",
     id: "algolia-search",
     placeholder: "Search for components",
+    disabled: isSearchDisabled,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 36,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -238,7 +256,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 43,
       columnNumber: 13
     }
   }, __jsx("svg", {
@@ -247,7 +265,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 45,
       columnNumber: 15
     }
   }, __jsx("path", {
@@ -257,7 +275,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 46,
       columnNumber: 17
     }
   })))))), __jsx("div", {
@@ -265,7 +283,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 58,
       columnNumber: 7
     }
   }, __jsx("button", {
@@ -276,7 +294,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 59,
       columnNumber: 9
     }
   }, isOpen ? __jsx("svg", {
@@ -285,7 +303,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 61,
       columnNumber: 13
     }
   }, __jsx("path", {
@@ -295,7 +313,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 63,
       columnNumber: 15
     }
   })) : __jsx("svg", {
@@ -304,7 +322,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 69,
       columnNumber: 13
     }
   }, __jsx("path", {
@@ -314,7 +332,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 71,
       columnNumber: 15
     }
   })))), __jsx("div", {
@@ -322,7 +340,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 81,
       columnNumber: 7
     }
   }, __jsx("ul", {
@@ -330,14 +348,14 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 82,
       columnNumber: 9
     }
   }, __jsx("li", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 83,
       columnNumber: 11
     }
   }, __jsx("a", {
@@ -346,7 +364,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 84,
       columnNumber: 13
     }
   }, __jsx("svg", {
@@ -355,7 +373,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 85,
       columnNumber: 15
     }
   }, __jsx("path", {
@@ -364,7 +382,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 86,
       columnNumber: 17
     }
   })))))));
@@ -7207,7 +7225,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 4:
+/***/ 2:
 /*!***********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fdocs%2Falerts&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cdocs%5Calerts.jsx&hotRouterUpdates=true ***!
   \***********************************************************************************************************************************************/
@@ -7230,5 +7248,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=alerts.js.map

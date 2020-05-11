@@ -1,4 +1,157 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\docs\\forms.js"],{
+
+/***/ "./components/CodeCard.jsx":
+/*!*********************************!*\
+  !*** ./components/CodeCard.jsx ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_PrismCode__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/PrismCode */ "./components/PrismCode.jsx");
+var _jsxFileName = "D:\\windmill\\components\\CodeCard.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+function CodeCard(_ref) {
+  var lang = _ref.lang,
+      code = _ref.code;
+  return __jsx("div", {
+    className: "overflow-hidden rounded-lg",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    dangerouslySetInnerHTML: {
+      __html: code
+    },
+    className: "p-4 border-t border-l border-r rounded-t-lg",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 7
+    }
+  }), __jsx(_components_PrismCode__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    lang: lang,
+    code: code,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 7
+    }
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (CodeCard);
+
+/***/ }),
+
+/***/ "./components/ExampleSection.jsx":
+/*!***************************************!*\
+  !*** ./components/ExampleSection.jsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "D:\\windmill\\components\\ExampleSection.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+function ExampleSection(_ref) {
+  var children = _ref.children,
+      id = _ref.id;
+  return __jsx("div", {
+    id: id,
+    className: "mb-12",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 5
+    }
+  }, children);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ExampleSection);
+
+/***/ }),
+
+/***/ "./components/Headings/H2.jsx":
+/*!************************************!*\
+  !*** ./components/Headings/H2.jsx ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "D:\\windmill\\components\\Headings\\H2.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+function H2(_ref) {
+  var children = _ref.children;
+  return __jsx("h2", {
+    className: "text-4xl font-semibold text-gray-800",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 10
+    }
+  }, children);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (H2);
+
+/***/ }),
+
+/***/ "./components/Headings/H4.jsx":
+/*!************************************!*\
+  !*** ./components/Headings/H4.jsx ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "D:\\windmill\\components\\Headings\\H4.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+function H4(_ref) {
+  var children = _ref.children;
+  return __jsx("h4", {
+    className: "mb-2 text-xl font-semibold text-gray-700",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 10
+    }
+  }, children);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (H4);
+
+/***/ }),
 
 /***/ "./components/Navbar.jsx":
 /*!*******************************!*\
@@ -21,12 +174,29 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function Navbar(_ref) {
   var isOpen = _ref.isOpen,
       setIsOpen = _ref.setIsOpen;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      isSearchDisabled = _useState[0],
+      setIsSearchDisabled = _useState[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (window.docsearch) {
+      window.docsearch({
+        apiKey: 'de0ea1927c3b929b1dd95baee343cfb4',
+        indexName: 'estevanmaito_tailwind-starter-kit',
+        inputSelector: '#algolia-search'
+      });
+    } else {
+      console.warn('Search has failed to load');
+      setIsSearchDisabled(true);
+    }
+  }, []);
   return __jsx("header", {
     className: "fixed inset-x-0 top-0 z-20 flex items-center h-16 max-w-screen-xl px-6 mx-auto text-gray-700 bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 21,
       columnNumber: 5
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -34,7 +204,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 23,
       columnNumber: 7
     }
   }, __jsx("a", {
@@ -42,7 +212,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 24,
       columnNumber: 9
     }
   }, "Tailwind Starter Kit")), __jsx("div", {
@@ -50,7 +220,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 30,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -58,7 +228,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 33,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -66,7 +236,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 34,
       columnNumber: 11
     }
   }, __jsx("input", {
@@ -74,10 +244,11 @@ function Navbar(_ref) {
     className: "w-full py-2 pl-10 pr-4 placeholder-gray-600 transition-shadow duration-100 bg-gray-100 border border-gray-200 rounded-lg focus:bg-white focus:shadow-lg",
     id: "algolia-search",
     placeholder: "Search for components",
+    disabled: isSearchDisabled,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 36,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -85,7 +256,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 43,
       columnNumber: 13
     }
   }, __jsx("svg", {
@@ -94,7 +265,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 45,
       columnNumber: 15
     }
   }, __jsx("path", {
@@ -104,7 +275,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 46,
       columnNumber: 17
     }
   })))))), __jsx("div", {
@@ -112,7 +283,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 58,
       columnNumber: 7
     }
   }, __jsx("button", {
@@ -123,7 +294,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 59,
       columnNumber: 9
     }
   }, isOpen ? __jsx("svg", {
@@ -132,7 +303,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 61,
       columnNumber: 13
     }
   }, __jsx("path", {
@@ -142,7 +313,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 63,
       columnNumber: 15
     }
   })) : __jsx("svg", {
@@ -151,7 +322,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 69,
       columnNumber: 13
     }
   }, __jsx("path", {
@@ -161,7 +332,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 71,
       columnNumber: 15
     }
   })))), __jsx("div", {
@@ -169,7 +340,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 81,
       columnNumber: 7
     }
   }, __jsx("ul", {
@@ -177,14 +348,14 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 82,
       columnNumber: 9
     }
   }, __jsx("li", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 83,
       columnNumber: 11
     }
   }, __jsx("a", {
@@ -193,7 +364,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 84,
       columnNumber: 13
     }
   }, __jsx("svg", {
@@ -202,7 +373,7 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 85,
       columnNumber: 15
     }
   }, __jsx("path", {
@@ -211,13 +382,61 @@ function Navbar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 86,
       columnNumber: 17
     }
   })))))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
+
+/***/ }),
+
+/***/ "./components/PrismCode.jsx":
+/*!**********************************!*\
+  !*** ./components/PrismCode.jsx ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prismjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prismjs */ "./node_modules/prismjs/prism.js");
+/* harmony import */ var prismjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prismjs__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "D:\\windmill\\components\\PrismCode.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+function PrismCode(_ref) {
+  var code = _ref.code,
+      lang = _ref.lang;
+  var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    prismjs__WEBPACK_IMPORTED_MODULE_1___default.a.highlightElement(ref.current);
+  }, []);
+  return __jsx("pre", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 5
+    }
+  }, __jsx("code", {
+    ref: ref,
+    className: "language-".concat(lang),
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 7
+    }
+  }, code.trim()));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PrismCode);
 
 /***/ }),
 
@@ -538,6 +757,145 @@ function Sidebar(_ref) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Sidebar);
+
+/***/ }),
+
+/***/ "./components/Text/Lead.jsx":
+/*!**********************************!*\
+  !*** ./components/Text/Lead.jsx ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "D:\\windmill\\components\\Text\\Lead.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+function Lead(_ref) {
+  var children = _ref.children;
+  return __jsx("p", {
+    className: "mt-2 text-lg font-semibold leading-tight text-gray-600",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 10
+    }
+  }, children);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Lead);
+
+/***/ }),
+
+/***/ "./components/Text/P.jsx":
+/*!*******************************!*\
+  !*** ./components/Text/P.jsx ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "D:\\windmill\\components\\Text\\P.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+function P(_ref) {
+  var children = _ref.children;
+  return __jsx("p", {
+    className: "mb-3 leading-normal text-gray-700",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 10
+    }
+  }, children);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (P);
+
+/***/ }),
+
+/***/ "./containers/Layout.jsx":
+/*!*******************************!*\
+  !*** ./containers/Layout.jsx ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.jsx");
+/* harmony import */ var _components_Sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Sidebar */ "./components/Sidebar.jsx");
+var _jsxFileName = "D:\\windmill\\containers\\Layout.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+function Layout(_ref) {
+  var children = _ref.children;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      isOpen = _useState[0],
+      setIsOpen = _useState[1];
+
+  var mainClassName = isOpen ? 'fixed max-w-full min-h-screen overflow-hidden lg:relative lg:w-3/4 xl:w-3/5 xl:pl-12' : 'max-w-full lg:relative lg:w-3/4 xl:w-3/5 xl:pl-12';
+  return __jsx("div", {
+    className: "w-full px-6 mx-auto sm:max-w-screen-sm lg:max-w-screen-xl",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 5
+    }
+  }, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    isOpen: isOpen,
+    setIsOpen: setIsOpen,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 7
+    }
+  }), __jsx("div", {
+    className: "flex mt-24",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    isOpen: isOpen,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 9
+    }
+  }), __jsx("div", {
+    className: mainClassName,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }, children)));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Layout);
 
 /***/ }),
 
@@ -1155,23 +1513,23 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cindex.jsx&hotRouterUpdates=true!./":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cindex.jsx&hotRouterUpdates=true ***!
-  \**********************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fdocs%2Fforms&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cdocs%5Cforms.jsx&hotRouterUpdates=true!./":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fdocs%2Fforms&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cdocs%5Cforms.jsx&hotRouterUpdates=true ***!
+  \*****************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
     (window.__NEXT_P = window.__NEXT_P || []).push([
-      "/",
+      "/docs/forms",
       function () {
-        var mod = __webpack_require__(/*! ./pages/index.jsx */ "./pages/index.jsx");
+        var mod = __webpack_require__(/*! ./pages/docs/forms.jsx */ "./pages/docs/forms.jsx");
         if (true) {
-          module.hot.accept(/*! ./pages/index.jsx */ "./pages/index.jsx", function () {
-            if (!next.router.components["/"]) return;
-            var updatedPage = __webpack_require__(/*! ./pages/index.jsx */ "./pages/index.jsx");
-            next.router.update("/", updatedPage);
+          module.hot.accept(/*! ./pages/docs/forms.jsx */ "./pages/docs/forms.jsx", function () {
+            if (!next.router.components["/docs/forms"]) return;
+            var updatedPage = __webpack_require__(/*! ./pages/docs/forms.jsx */ "./pages/docs/forms.jsx");
+            next.router.update("/docs/forms", updatedPage);
           });
         }
         return mod;
@@ -3378,6 +3736,1154 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
+/***/ "./node_modules/prismjs/prism.js":
+/*!***************************************!*\
+  !*** ./node_modules/prismjs/prism.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {
+/* **********************************************
+     Begin prism-core.js
+********************************************** */
+
+var _self = (typeof window !== 'undefined')
+	? window   // if in browser
+	: (
+		(typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope)
+		? self // if in worker
+		: {}   // if in node js
+	);
+
+/**
+ * Prism: Lightweight, robust, elegant syntax highlighting
+ * MIT license http://www.opensource.org/licenses/mit-license.php/
+ * @author Lea Verou http://lea.verou.me
+ */
+
+var Prism = (function (_self){
+
+// Private helper vars
+var lang = /\blang(?:uage)?-([\w-]+)\b/i;
+var uniqueId = 0;
+
+
+var _ = {
+	manual: _self.Prism && _self.Prism.manual,
+	disableWorkerMessageHandler: _self.Prism && _self.Prism.disableWorkerMessageHandler,
+	util: {
+		encode: function encode(tokens) {
+			if (tokens instanceof Token) {
+				return new Token(tokens.type, encode(tokens.content), tokens.alias);
+			} else if (Array.isArray(tokens)) {
+				return tokens.map(encode);
+			} else {
+				return tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\u00a0/g, ' ');
+			}
+		},
+
+		type: function (o) {
+			return Object.prototype.toString.call(o).slice(8, -1);
+		},
+
+		objId: function (obj) {
+			if (!obj['__id']) {
+				Object.defineProperty(obj, '__id', { value: ++uniqueId });
+			}
+			return obj['__id'];
+		},
+
+		// Deep clone a language definition (e.g. to extend it)
+		clone: function deepClone(o, visited) {
+			var clone, id, type = _.util.type(o);
+			visited = visited || {};
+
+			switch (type) {
+				case 'Object':
+					id = _.util.objId(o);
+					if (visited[id]) {
+						return visited[id];
+					}
+					clone = {};
+					visited[id] = clone;
+
+					for (var key in o) {
+						if (o.hasOwnProperty(key)) {
+							clone[key] = deepClone(o[key], visited);
+						}
+					}
+
+					return clone;
+
+				case 'Array':
+					id = _.util.objId(o);
+					if (visited[id]) {
+						return visited[id];
+					}
+					clone = [];
+					visited[id] = clone;
+
+					o.forEach(function (v, i) {
+						clone[i] = deepClone(v, visited);
+					});
+
+					return clone;
+
+				default:
+					return o;
+			}
+		},
+
+		/**
+		 * Returns the Prism language of the given element set by a `language-xxxx` or `lang-xxxx` class.
+		 *
+		 * If no language is set for the element or the element is `null` or `undefined`, `none` will be returned.
+		 *
+		 * @param {Element} element
+		 * @returns {string}
+		 */
+		getLanguage: function (element) {
+			while (element && !lang.test(element.className)) {
+				element = element.parentElement;
+			}
+			if (element) {
+				return (element.className.match(lang) || [, 'none'])[1].toLowerCase();
+			}
+			return 'none';
+		},
+
+		/**
+		 * Returns the script element that is currently executing.
+		 *
+		 * This does __not__ work for line script element.
+		 *
+		 * @returns {HTMLScriptElement | null}
+		 */
+		currentScript: function () {
+			if (typeof document === 'undefined') {
+				return null;
+			}
+			if ('currentScript' in document) {
+				return document.currentScript;
+			}
+
+			// IE11 workaround
+			// we'll get the src of the current script by parsing IE11's error stack trace
+			// this will not work for inline scripts
+
+			try {
+				throw new Error();
+			} catch (err) {
+				// Get file src url from stack. Specifically works with the format of stack traces in IE.
+				// A stack will look like this:
+				//
+				// Error
+				//    at _.util.currentScript (http://localhost/components/prism-core.js:119:5)
+				//    at Global code (http://localhost/components/prism-core.js:606:1)
+
+				var src = (/at [^(\r\n]*\((.*):.+:.+\)$/i.exec(err.stack) || [])[1];
+				if (src) {
+					var scripts = document.getElementsByTagName('script');
+					for (var i in scripts) {
+						if (scripts[i].src == src) {
+							return scripts[i];
+						}
+					}
+				}
+				return null;
+			}
+		}
+	},
+
+	languages: {
+		extend: function (id, redef) {
+			var lang = _.util.clone(_.languages[id]);
+
+			for (var key in redef) {
+				lang[key] = redef[key];
+			}
+
+			return lang;
+		},
+
+		/**
+		 * Insert a token before another token in a language literal
+		 * As this needs to recreate the object (we cannot actually insert before keys in object literals),
+		 * we cannot just provide an object, we need an object and a key.
+		 * @param inside The key (or language id) of the parent
+		 * @param before The key to insert before.
+		 * @param insert Object with the key/value pairs to insert
+		 * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
+		 */
+		insertBefore: function (inside, before, insert, root) {
+			root = root || _.languages;
+			var grammar = root[inside];
+			var ret = {};
+
+			for (var token in grammar) {
+				if (grammar.hasOwnProperty(token)) {
+
+					if (token == before) {
+						for (var newToken in insert) {
+							if (insert.hasOwnProperty(newToken)) {
+								ret[newToken] = insert[newToken];
+							}
+						}
+					}
+
+					// Do not insert token which also occur in insert. See #1525
+					if (!insert.hasOwnProperty(token)) {
+						ret[token] = grammar[token];
+					}
+				}
+			}
+
+			var old = root[inside];
+			root[inside] = ret;
+
+			// Update references in other language definitions
+			_.languages.DFS(_.languages, function(key, value) {
+				if (value === old && key != inside) {
+					this[key] = ret;
+				}
+			});
+
+			return ret;
+		},
+
+		// Traverse a language definition with Depth First Search
+		DFS: function DFS(o, callback, type, visited) {
+			visited = visited || {};
+
+			var objId = _.util.objId;
+
+			for (var i in o) {
+				if (o.hasOwnProperty(i)) {
+					callback.call(o, i, o[i], type || i);
+
+					var property = o[i],
+					    propertyType = _.util.type(property);
+
+					if (propertyType === 'Object' && !visited[objId(property)]) {
+						visited[objId(property)] = true;
+						DFS(property, callback, null, visited);
+					}
+					else if (propertyType === 'Array' && !visited[objId(property)]) {
+						visited[objId(property)] = true;
+						DFS(property, callback, i, visited);
+					}
+				}
+			}
+		}
+	},
+	plugins: {},
+
+	highlightAll: function(async, callback) {
+		_.highlightAllUnder(document, async, callback);
+	},
+
+	highlightAllUnder: function(container, async, callback) {
+		var env = {
+			callback: callback,
+			container: container,
+			selector: 'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'
+		};
+
+		_.hooks.run('before-highlightall', env);
+
+		env.elements = Array.prototype.slice.apply(env.container.querySelectorAll(env.selector));
+
+		_.hooks.run('before-all-elements-highlight', env);
+
+		for (var i = 0, element; element = env.elements[i++];) {
+			_.highlightElement(element, async === true, env.callback);
+		}
+	},
+
+	highlightElement: function(element, async, callback) {
+		// Find language
+		var language = _.util.getLanguage(element);
+		var grammar = _.languages[language];
+
+		// Set language on the element, if not present
+		element.className = element.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+
+		// Set language on the parent, for styling
+		var parent = element.parentNode;
+		if (parent && parent.nodeName.toLowerCase() === 'pre') {
+			parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+		}
+
+		var code = element.textContent;
+
+		var env = {
+			element: element,
+			language: language,
+			grammar: grammar,
+			code: code
+		};
+
+		function insertHighlightedCode(highlightedCode) {
+			env.highlightedCode = highlightedCode;
+
+			_.hooks.run('before-insert', env);
+
+			env.element.innerHTML = env.highlightedCode;
+
+			_.hooks.run('after-highlight', env);
+			_.hooks.run('complete', env);
+			callback && callback.call(env.element);
+		}
+
+		_.hooks.run('before-sanity-check', env);
+
+		if (!env.code) {
+			_.hooks.run('complete', env);
+			callback && callback.call(env.element);
+			return;
+		}
+
+		_.hooks.run('before-highlight', env);
+
+		if (!env.grammar) {
+			insertHighlightedCode(_.util.encode(env.code));
+			return;
+		}
+
+		if (async && _self.Worker) {
+			var worker = new Worker(_.filename);
+
+			worker.onmessage = function(evt) {
+				insertHighlightedCode(evt.data);
+			};
+
+			worker.postMessage(JSON.stringify({
+				language: env.language,
+				code: env.code,
+				immediateClose: true
+			}));
+		}
+		else {
+			insertHighlightedCode(_.highlight(env.code, env.grammar, env.language));
+		}
+	},
+
+	highlight: function (text, grammar, language) {
+		var env = {
+			code: text,
+			grammar: grammar,
+			language: language
+		};
+		_.hooks.run('before-tokenize', env);
+		env.tokens = _.tokenize(env.code, env.grammar);
+		_.hooks.run('after-tokenize', env);
+		return Token.stringify(_.util.encode(env.tokens), env.language);
+	},
+
+	tokenize: function(text, grammar) {
+		var rest = grammar.rest;
+		if (rest) {
+			for (var token in rest) {
+				grammar[token] = rest[token];
+			}
+
+			delete grammar.rest;
+		}
+
+		var tokenList = new LinkedList();
+		addAfter(tokenList, tokenList.head, text);
+
+		matchGrammar(text, tokenList, grammar, tokenList.head, 0);
+
+		return toArray(tokenList);
+	},
+
+	hooks: {
+		all: {},
+
+		add: function (name, callback) {
+			var hooks = _.hooks.all;
+
+			hooks[name] = hooks[name] || [];
+
+			hooks[name].push(callback);
+		},
+
+		run: function (name, env) {
+			var callbacks = _.hooks.all[name];
+
+			if (!callbacks || !callbacks.length) {
+				return;
+			}
+
+			for (var i=0, callback; callback = callbacks[i++];) {
+				callback(env);
+			}
+		}
+	},
+
+	Token: Token
+};
+
+_self.Prism = _;
+
+function Token(type, content, alias, matchedStr, greedy) {
+	this.type = type;
+	this.content = content;
+	this.alias = alias;
+	// Copy of the full string this token was created from
+	this.length = (matchedStr || '').length|0;
+	this.greedy = !!greedy;
+}
+
+Token.stringify = function stringify(o, language) {
+	if (typeof o == 'string') {
+		return o;
+	}
+	if (Array.isArray(o)) {
+		var s = '';
+		o.forEach(function (e) {
+			s += stringify(e, language);
+		});
+		return s;
+	}
+
+	var env = {
+		type: o.type,
+		content: stringify(o.content, language),
+		tag: 'span',
+		classes: ['token', o.type],
+		attributes: {},
+		language: language
+	};
+
+	var aliases = o.alias;
+	if (aliases) {
+		if (Array.isArray(aliases)) {
+			Array.prototype.push.apply(env.classes, aliases);
+		} else {
+			env.classes.push(aliases);
+		}
+	}
+
+	_.hooks.run('wrap', env);
+
+	var attributes = '';
+	for (var name in env.attributes) {
+		attributes += ' ' + name + '="' + (env.attributes[name] || '').replace(/"/g, '&quot;') + '"';
+	}
+
+	return '<' + env.tag + ' class="' + env.classes.join(' ') + '"' + attributes + '>' + env.content + '</' + env.tag + '>';
+};
+
+/**
+ * @param {string} text
+ * @param {LinkedList<string | Token>} tokenList
+ * @param {any} grammar
+ * @param {LinkedListNode<string | Token>} startNode
+ * @param {number} startPos
+ * @param {boolean} [oneshot=false]
+ * @param {string} [target]
+ */
+function matchGrammar(text, tokenList, grammar, startNode, startPos, oneshot, target) {
+	for (var token in grammar) {
+		if (!grammar.hasOwnProperty(token) || !grammar[token]) {
+			continue;
+		}
+
+		var patterns = grammar[token];
+		patterns = Array.isArray(patterns) ? patterns : [patterns];
+
+		for (var j = 0; j < patterns.length; ++j) {
+			if (target && target == token + ',' + j) {
+				return;
+			}
+
+			var pattern = patterns[j],
+				inside = pattern.inside,
+				lookbehind = !!pattern.lookbehind,
+				greedy = !!pattern.greedy,
+				lookbehindLength = 0,
+				alias = pattern.alias;
+
+			if (greedy && !pattern.pattern.global) {
+				// Without the global flag, lastIndex won't work
+				var flags = pattern.pattern.toString().match(/[imsuy]*$/)[0];
+				pattern.pattern = RegExp(pattern.pattern.source, flags + 'g');
+			}
+
+			pattern = pattern.pattern || pattern;
+
+			for ( // iterate the token list and keep track of the current token/string position
+				var currentNode = startNode.next, pos = startPos;
+				currentNode !== tokenList.tail;
+				pos += currentNode.value.length, currentNode = currentNode.next
+			) {
+
+				var str = currentNode.value;
+
+				if (tokenList.length > text.length) {
+					// Something went terribly wrong, ABORT, ABORT!
+					return;
+				}
+
+				if (str instanceof Token) {
+					continue;
+				}
+
+				var removeCount = 1; // this is the to parameter of removeBetween
+
+				if (greedy && currentNode != tokenList.tail.prev) {
+					pattern.lastIndex = pos;
+					var match = pattern.exec(text);
+					if (!match) {
+						break;
+					}
+
+					var from = match.index + (lookbehind && match[1] ? match[1].length : 0);
+					var to = match.index + match[0].length;
+					var p = pos;
+
+					// find the node that contains the match
+					p += currentNode.value.length;
+					while (from >= p) {
+						currentNode = currentNode.next;
+						p += currentNode.value.length;
+					}
+					// adjust pos (and p)
+					p -= currentNode.value.length;
+					pos = p;
+
+					// the current node is a Token, then the match starts inside another Token, which is invalid
+					if (currentNode.value instanceof Token) {
+						continue;
+					}
+
+					// find the last node which is affected by this match
+					for (
+						var k = currentNode;
+						k !== tokenList.tail && (p < to || (typeof k.value === 'string' && !k.prev.value.greedy));
+						k = k.next
+					) {
+						removeCount++;
+						p += k.value.length;
+					}
+					removeCount--;
+
+					// replace with the new match
+					str = text.slice(pos, p);
+					match.index -= pos;
+				} else {
+					pattern.lastIndex = 0;
+
+					var match = pattern.exec(str);
+				}
+
+				if (!match) {
+					if (oneshot) {
+						break;
+					}
+
+					continue;
+				}
+
+				if (lookbehind) {
+					lookbehindLength = match[1] ? match[1].length : 0;
+				}
+
+				var from = match.index + lookbehindLength,
+					match = match[0].slice(lookbehindLength),
+					to = from + match.length,
+					before = str.slice(0, from),
+					after = str.slice(to);
+
+				var removeFrom = currentNode.prev;
+
+				if (before) {
+					removeFrom = addAfter(tokenList, removeFrom, before);
+					pos += before.length;
+				}
+
+				removeRange(tokenList, removeFrom, removeCount);
+
+				var wrapped = new Token(token, inside ? _.tokenize(match, inside) : match, alias, match, greedy);
+				currentNode = addAfter(tokenList, removeFrom, wrapped);
+
+				if (after) {
+					addAfter(tokenList, currentNode, after);
+				}
+
+
+				if (removeCount > 1)
+					matchGrammar(text, tokenList, grammar, currentNode.prev, pos, true, token + ',' + j);
+
+				if (oneshot)
+					break;
+			}
+		}
+	}
+}
+
+/**
+ * @typedef LinkedListNode
+ * @property {T} value
+ * @property {LinkedListNode<T> | null} prev The previous node.
+ * @property {LinkedListNode<T> | null} next The next node.
+ * @template T
+ */
+
+/**
+ * @template T
+ */
+function LinkedList() {
+	/** @type {LinkedListNode<T>} */
+	var head = { value: null, prev: null, next: null };
+	/** @type {LinkedListNode<T>} */
+	var tail = { value: null, prev: head, next: null };
+	head.next = tail;
+
+	/** @type {LinkedListNode<T>} */
+	this.head = head;
+	/** @type {LinkedListNode<T>} */
+	this.tail = tail;
+	this.length = 0;
+}
+
+/**
+ * Adds a new node with the given value to the list.
+ * @param {LinkedList<T>} list
+ * @param {LinkedListNode<T>} node
+ * @param {T} value
+ * @returns {LinkedListNode<T>} The added node.
+ * @template T
+ */
+function addAfter(list, node, value) {
+	// assumes that node != list.tail && values.length >= 0
+	var next = node.next;
+
+	var newNode = { value: value, prev: node, next: next };
+	node.next = newNode;
+	next.prev = newNode;
+	list.length++;
+
+	return newNode;
+}
+/**
+ * Removes `count` nodes after the given node. The given node will not be removed.
+ * @param {LinkedList<T>} list
+ * @param {LinkedListNode<T>} node
+ * @param {number} count
+ * @template T
+ */
+function removeRange(list, node, count) {
+	var next = node.next;
+	for (var i = 0; i < count && next !== list.tail; i++) {
+		next = next.next;
+	}
+	node.next = next;
+	next.prev = node;
+	list.length -= i;
+}
+/**
+ * @param {LinkedList<T>} list
+ * @returns {T[]}
+ * @template T
+ */
+function toArray(list) {
+	var array = [];
+	var node = list.head.next;
+	while (node !== list.tail) {
+		array.push(node.value);
+		node = node.next;
+	}
+	return array;
+}
+
+
+if (!_self.document) {
+	if (!_self.addEventListener) {
+		// in Node.js
+		return _;
+	}
+
+	if (!_.disableWorkerMessageHandler) {
+		// In worker
+		_self.addEventListener('message', function (evt) {
+			var message = JSON.parse(evt.data),
+				lang = message.language,
+				code = message.code,
+				immediateClose = message.immediateClose;
+
+			_self.postMessage(_.highlight(code, _.languages[lang], lang));
+			if (immediateClose) {
+				_self.close();
+			}
+		}, false);
+	}
+
+	return _;
+}
+
+//Get current script and highlight
+var script = _.util.currentScript();
+
+if (script) {
+	_.filename = script.src;
+
+	if (script.hasAttribute('data-manual')) {
+		_.manual = true;
+	}
+}
+
+function highlightAutomaticallyCallback() {
+	if (!_.manual) {
+		_.highlightAll();
+	}
+}
+
+if (!_.manual) {
+	// If the document state is "loading", then we'll use DOMContentLoaded.
+	// If the document state is "interactive" and the prism.js script is deferred, then we'll also use the
+	// DOMContentLoaded event because there might be some plugins or languages which have also been deferred and they
+	// might take longer one animation frame to execute which can create a race condition where only some plugins have
+	// been loaded when Prism.highlightAll() is executed, depending on how fast resources are loaded.
+	// See https://github.com/PrismJS/prism/issues/2102
+	var readyState = document.readyState;
+	if (readyState === 'loading' || readyState === 'interactive' && script && script.defer) {
+		document.addEventListener('DOMContentLoaded', highlightAutomaticallyCallback);
+	} else {
+		if (window.requestAnimationFrame) {
+			window.requestAnimationFrame(highlightAutomaticallyCallback);
+		} else {
+			window.setTimeout(highlightAutomaticallyCallback, 16);
+		}
+	}
+}
+
+return _;
+
+})(_self);
+
+if ( true && module.exports) {
+	module.exports = Prism;
+}
+
+// hack for components to work correctly in node.js
+if (typeof global !== 'undefined') {
+	global.Prism = Prism;
+}
+
+
+/* **********************************************
+     Begin prism-markup.js
+********************************************** */
+
+Prism.languages.markup = {
+	'comment': /<!--[\s\S]*?-->/,
+	'prolog': /<\?[\s\S]+?\?>/,
+	'doctype': {
+		pattern: /<!DOCTYPE(?:[^>"'[\]]|"[^"]*"|'[^']*')+(?:\[(?:(?!<!--)[^"'\]]|"[^"]*"|'[^']*'|<!--[\s\S]*?-->)*\]\s*)?>/i,
+		greedy: true
+	},
+	'cdata': /<!\[CDATA\[[\s\S]*?]]>/i,
+	'tag': {
+		pattern: /<\/?(?!\d)[^\s>\/=$<%]+(?:\s(?:\s*[^\s>\/=]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))|(?=[\s/>])))+)?\s*\/?>/i,
+		greedy: true,
+		inside: {
+			'tag': {
+				pattern: /^<\/?[^\s>\/]+/i,
+				inside: {
+					'punctuation': /^<\/?/,
+					'namespace': /^[^\s>\/:]+:/
+				}
+			},
+			'attr-value': {
+				pattern: /=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+)/i,
+				inside: {
+					'punctuation': [
+						/^=/,
+						{
+							pattern: /^(\s*)["']|["']$/,
+							lookbehind: true
+						}
+					]
+				}
+			},
+			'punctuation': /\/?>/,
+			'attr-name': {
+				pattern: /[^\s>\/]+/,
+				inside: {
+					'namespace': /^[^\s>\/:]+:/
+				}
+			}
+
+		}
+	},
+	'entity': /&#?[\da-z]{1,8};/i
+};
+
+Prism.languages.markup['tag'].inside['attr-value'].inside['entity'] =
+	Prism.languages.markup['entity'];
+
+// Plugin to make entity title show the real entity, idea by Roman Komarov
+Prism.hooks.add('wrap', function(env) {
+
+	if (env.type === 'entity') {
+		env.attributes['title'] = env.content.replace(/&amp;/, '&');
+	}
+});
+
+Object.defineProperty(Prism.languages.markup.tag, 'addInlined', {
+	/**
+	 * Adds an inlined language to markup.
+	 *
+	 * An example of an inlined language is CSS with `<style>` tags.
+	 *
+	 * @param {string} tagName The name of the tag that contains the inlined language. This name will be treated as
+	 * case insensitive.
+	 * @param {string} lang The language key.
+	 * @example
+	 * addInlined('style', 'css');
+	 */
+	value: function addInlined(tagName, lang) {
+		var includedCdataInside = {};
+		includedCdataInside['language-' + lang] = {
+			pattern: /(^<!\[CDATA\[)[\s\S]+?(?=\]\]>$)/i,
+			lookbehind: true,
+			inside: Prism.languages[lang]
+		};
+		includedCdataInside['cdata'] = /^<!\[CDATA\[|\]\]>$/i;
+
+		var inside = {
+			'included-cdata': {
+				pattern: /<!\[CDATA\[[\s\S]*?\]\]>/i,
+				inside: includedCdataInside
+			}
+		};
+		inside['language-' + lang] = {
+			pattern: /[\s\S]+/,
+			inside: Prism.languages[lang]
+		};
+
+		var def = {};
+		def[tagName] = {
+			pattern: RegExp(/(<__[\s\S]*?>)(?:<!\[CDATA\[[\s\S]*?\]\]>\s*|[\s\S])*?(?=<\/__>)/.source.replace(/__/g, function () { return tagName; }), 'i'),
+			lookbehind: true,
+			greedy: true,
+			inside: inside
+		};
+
+		Prism.languages.insertBefore('markup', 'cdata', def);
+	}
+});
+
+Prism.languages.xml = Prism.languages.extend('markup', {});
+Prism.languages.html = Prism.languages.markup;
+Prism.languages.mathml = Prism.languages.markup;
+Prism.languages.svg = Prism.languages.markup;
+
+
+/* **********************************************
+     Begin prism-css.js
+********************************************** */
+
+(function (Prism) {
+
+	var string = /("|')(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/;
+
+	Prism.languages.css = {
+		'comment': /\/\*[\s\S]*?\*\//,
+		'atrule': {
+			pattern: /@[\w-]+[\s\S]*?(?:;|(?=\s*\{))/,
+			inside: {
+				'rule': /^@[\w-]+/,
+				'selector-function-argument': {
+					pattern: /(\bselector\s*\((?!\s*\))\s*)(?:[^()]|\((?:[^()]|\([^()]*\))*\))+?(?=\s*\))/,
+					lookbehind: true,
+					alias: 'selector'
+				}
+				// See rest below
+			}
+		},
+		'url': {
+			pattern: RegExp('url\\((?:' + string.source + '|[^\n\r()]*)\\)', 'i'),
+			greedy: true,
+			inside: {
+				'function': /^url/i,
+				'punctuation': /^\(|\)$/
+			}
+		},
+		'selector': RegExp('[^{}\\s](?:[^{};"\']|' + string.source + ')*?(?=\\s*\\{)'),
+		'string': {
+			pattern: string,
+			greedy: true
+		},
+		'property': /[-_a-z\xA0-\uFFFF][-\w\xA0-\uFFFF]*(?=\s*:)/i,
+		'important': /!important\b/i,
+		'function': /[-a-z0-9]+(?=\()/i,
+		'punctuation': /[(){};:,]/
+	};
+
+	Prism.languages.css['atrule'].inside.rest = Prism.languages.css;
+
+	var markup = Prism.languages.markup;
+	if (markup) {
+		markup.tag.addInlined('style', 'css');
+
+		Prism.languages.insertBefore('inside', 'attr-value', {
+			'style-attr': {
+				pattern: /\s*style=("|')(?:\\[\s\S]|(?!\1)[^\\])*\1/i,
+				inside: {
+					'attr-name': {
+						pattern: /^\s*style/i,
+						inside: markup.tag.inside
+					},
+					'punctuation': /^\s*=\s*['"]|['"]\s*$/,
+					'attr-value': {
+						pattern: /.+/i,
+						inside: Prism.languages.css
+					}
+				},
+				alias: 'language-css'
+			}
+		}, markup.tag);
+	}
+
+}(Prism));
+
+
+/* **********************************************
+     Begin prism-clike.js
+********************************************** */
+
+Prism.languages.clike = {
+	'comment': [
+		{
+			pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,
+			lookbehind: true
+		},
+		{
+			pattern: /(^|[^\\:])\/\/.*/,
+			lookbehind: true,
+			greedy: true
+		}
+	],
+	'string': {
+		pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
+		greedy: true
+	},
+	'class-name': {
+		pattern: /(\b(?:class|interface|extends|implements|trait|instanceof|new)\s+|\bcatch\s+\()[\w.\\]+/i,
+		lookbehind: true,
+		inside: {
+			'punctuation': /[.\\]/
+		}
+	},
+	'keyword': /\b(?:if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,
+	'boolean': /\b(?:true|false)\b/,
+	'function': /\w+(?=\()/,
+	'number': /\b0x[\da-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?/i,
+	'operator': /[<>]=?|[!=]=?=?|--?|\+\+?|&&?|\|\|?|[?*/~^%]/,
+	'punctuation': /[{}[\];(),.:]/
+};
+
+
+/* **********************************************
+     Begin prism-javascript.js
+********************************************** */
+
+Prism.languages.javascript = Prism.languages.extend('clike', {
+	'class-name': [
+		Prism.languages.clike['class-name'],
+		{
+			pattern: /(^|[^$\w\xA0-\uFFFF])[_$A-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\.(?:prototype|constructor))/,
+			lookbehind: true
+		}
+	],
+	'keyword': [
+		{
+			pattern: /((?:^|})\s*)(?:catch|finally)\b/,
+			lookbehind: true
+		},
+		{
+			pattern: /(^|[^.]|\.\.\.\s*)\b(?:as|async(?=\s*(?:function\b|\(|[$\w\xA0-\uFFFF]|$))|await|break|case|class|const|continue|debugger|default|delete|do|else|enum|export|extends|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)\b/,
+			lookbehind: true
+		},
+	],
+	'number': /\b(?:(?:0[xX](?:[\dA-Fa-f](?:_[\dA-Fa-f])?)+|0[bB](?:[01](?:_[01])?)+|0[oO](?:[0-7](?:_[0-7])?)+)n?|(?:\d(?:_\d)?)+n|NaN|Infinity)\b|(?:\b(?:\d(?:_\d)?)+\.?(?:\d(?:_\d)?)*|\B\.(?:\d(?:_\d)?)+)(?:[Ee][+-]?(?:\d(?:_\d)?)+)?/,
+	// Allow for all non-ASCII characters (See http://stackoverflow.com/a/2008444)
+	'function': /#?[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*(?:\.\s*(?:apply|bind|call)\s*)?\()/,
+	'operator': /--|\+\+|\*\*=?|=>|&&|\|\||[!=]==|<<=?|>>>?=?|[-+*/%&|^!=<>]=?|\.{3}|\?[.?]?|[~:]/
+});
+
+Prism.languages.javascript['class-name'][0].pattern = /(\b(?:class|interface|extends|implements|instanceof|new)\s+)[\w.\\]+/;
+
+Prism.languages.insertBefore('javascript', 'keyword', {
+	'regex': {
+		pattern: /((?:^|[^$\w\xA0-\uFFFF."'\])\s])\s*)\/(?:\[(?:[^\]\\\r\n]|\\.)*]|\\.|[^/\\\[\r\n])+\/[gimyus]{0,6}(?=(?:\s|\/\*[\s\S]*?\*\/)*(?:$|[\r\n,.;:})\]]|\/\/))/,
+		lookbehind: true,
+		greedy: true
+	},
+	// This must be declared before keyword because we use "function" inside the look-forward
+	'function-variable': {
+		pattern: /#?[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*[=:]\s*(?:async\s*)?(?:\bfunction\b|(?:\((?:[^()]|\([^()]*\))*\)|[_$a-zA-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*)\s*=>))/,
+		alias: 'function'
+	},
+	'parameter': [
+		{
+			pattern: /(function(?:\s+[_$A-Za-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*)?\s*\(\s*)(?!\s)(?:[^()]|\([^()]*\))+?(?=\s*\))/,
+			lookbehind: true,
+			inside: Prism.languages.javascript
+		},
+		{
+			pattern: /[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*=>)/i,
+			inside: Prism.languages.javascript
+		},
+		{
+			pattern: /(\(\s*)(?!\s)(?:[^()]|\([^()]*\))+?(?=\s*\)\s*=>)/,
+			lookbehind: true,
+			inside: Prism.languages.javascript
+		},
+		{
+			pattern: /((?:\b|\s|^)(?!(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)(?![$\w\xA0-\uFFFF]))(?:[_$A-Za-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*\s*)\(\s*)(?!\s)(?:[^()]|\([^()]*\))+?(?=\s*\)\s*\{)/,
+			lookbehind: true,
+			inside: Prism.languages.javascript
+		}
+	],
+	'constant': /\b[A-Z](?:[A-Z_]|\dx?)*\b/
+});
+
+Prism.languages.insertBefore('javascript', 'string', {
+	'template-string': {
+		pattern: /`(?:\\[\s\S]|\${(?:[^{}]|{(?:[^{}]|{[^}]*})*})+}|(?!\${)[^\\`])*`/,
+		greedy: true,
+		inside: {
+			'template-punctuation': {
+				pattern: /^`|`$/,
+				alias: 'string'
+			},
+			'interpolation': {
+				pattern: /((?:^|[^\\])(?:\\{2})*)\${(?:[^{}]|{(?:[^{}]|{[^}]*})*})+}/,
+				lookbehind: true,
+				inside: {
+					'interpolation-punctuation': {
+						pattern: /^\${|}$/,
+						alias: 'punctuation'
+					},
+					rest: Prism.languages.javascript
+				}
+			},
+			'string': /[\s\S]+/
+		}
+	}
+});
+
+if (Prism.languages.markup) {
+	Prism.languages.markup.tag.addInlined('script', 'javascript');
+}
+
+Prism.languages.js = Prism.languages.javascript;
+
+
+/* **********************************************
+     Begin prism-file-highlight.js
+********************************************** */
+
+(function () {
+	if (typeof self === 'undefined' || !self.Prism || !self.document || !document.querySelector) {
+		return;
+	}
+
+	/**
+	 * @param {Element} [container=document]
+	 */
+	self.Prism.fileHighlight = function(container) {
+		container = container || document;
+
+		var Extensions = {
+			'js': 'javascript',
+			'py': 'python',
+			'rb': 'ruby',
+			'ps1': 'powershell',
+			'psm1': 'powershell',
+			'sh': 'bash',
+			'bat': 'batch',
+			'h': 'c',
+			'tex': 'latex'
+		};
+
+		Array.prototype.slice.call(container.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+			// ignore if already loaded
+			if (pre.hasAttribute('data-src-loaded')) {
+				return;
+			}
+
+			// load current
+			var src = pre.getAttribute('data-src');
+
+			var language, parent = pre;
+			var lang = /\blang(?:uage)?-([\w-]+)\b/i;
+			while (parent && !lang.test(parent.className)) {
+				parent = parent.parentNode;
+			}
+
+			if (parent) {
+				language = (pre.className.match(lang) || [, ''])[1];
+			}
+
+			if (!language) {
+				var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+				language = Extensions[extension] || extension;
+			}
+
+			var code = document.createElement('code');
+			code.className = 'language-' + language;
+
+			pre.textContent = '';
+
+			code.textContent = 'Loading…';
+
+			pre.appendChild(code);
+
+			var xhr = new XMLHttpRequest();
+
+			xhr.open('GET', src, true);
+
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState == 4) {
+
+					if (xhr.status < 400 && xhr.responseText) {
+						code.textContent = xhr.responseText;
+
+						Prism.highlightElement(code);
+						// mark as loaded
+						pre.setAttribute('data-src-loaded', '');
+					}
+					else if (xhr.status >= 400) {
+						code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+					}
+					else {
+						code.textContent = '✖ Error: File does not exist or is empty';
+					}
+				}
+			};
+
+			xhr.send(null);
+		});
+	};
+
+	document.addEventListener('DOMContentLoaded', function () {
+		// execute inside handler, for dropping Event as argument
+		self.Prism.fileHighlight();
+	});
+
+})();
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/prop-types-exact/build/helpers/isPlainObject.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/prop-types-exact/build/helpers/isPlainObject.js ***!
@@ -5334,10 +6840,41 @@ try {
 
 /***/ }),
 
-/***/ "./pages/index.jsx":
-/*!*************************!*\
-  !*** ./pages/index.jsx ***!
-  \*************************/
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
+/***/ "./pages/docs/forms.jsx":
+/*!******************************!*\
+  !*** ./pages/docs/forms.jsx ***!
+  \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5345,12 +6882,15 @@ try {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.jsx");
-/* harmony import */ var _components_Sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Sidebar */ "./components/Sidebar.jsx");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_SEO__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/SEO */ "./components/SEO.jsx");
-var _jsxFileName = "D:\\windmill\\pages\\index.jsx";
+/* harmony import */ var _containers_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../containers/Layout */ "./containers/Layout.jsx");
+/* harmony import */ var _components_Headings_H2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Headings/H2 */ "./components/Headings/H2.jsx");
+/* harmony import */ var _components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Headings/H4 */ "./components/Headings/H4.jsx");
+/* harmony import */ var _components_Text_Lead__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Text/Lead */ "./components/Text/Lead.jsx");
+/* harmony import */ var _components_Text_P__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Text/P */ "./components/Text/P.jsx");
+/* harmony import */ var _components_CodeCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/CodeCard */ "./components/CodeCard.jsx");
+/* harmony import */ var _components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/ExampleSection */ "./components/ExampleSection.jsx");
+/* harmony import */ var _components_SEO__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/SEO */ "./components/SEO.jsx");
+var _jsxFileName = "D:\\windmill\\pages\\docs\\forms.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -5358,173 +6898,491 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-function Home() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      isOpen = _useState[0],
-      setIsOpen = _useState[1];
 
-  var mainClassName = isOpen ? 'fixed min-h-screen overflow-hidden lg:relative' : '';
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_SEO__WEBPACK_IMPORTED_MODULE_4__["default"], {
+
+
+var simpleInputCode = "\n<input class=\"border rounded-lg px-4 h-12 text-gray-700 placeholder-gray-600 text-lg w-full focus:shadow-outline mb-2\" type=\"text\" placeholder=\"Large input\">\n<input class=\"border rounded-lg px-3 h-10 text-gray-700 placeholder-gray-600 text-base w-full focus:shadow-outline mb-2\" type=\"text\" placeholder=\"Regular input\">\n<input class=\"border rounded-lg px-2 h-8 text-gray-700 placeholder-gray-600 text-sm focus:shadow-outline w-full\" type=\"text\" placeholder=\"Small input\">\n";
+var simpleSelectCode = "\n<div class=\"relative inline-block text-gray-700 w-full\">\n  <select class=\"appearance-none border rounded-lg pl-3 pr-6 h-10  placeholder-gray-600 text-base w-full focus:shadow-outline\" placeholder=\"Regular input\">\n    <option>A regular sized select input</option>\n    <option>Another option</option>\n    <option>And one more</option>\n  </select>\n  <div class=\"pointer-events-none absolute inset-y-0 right-0 flex items-center px-2\">\n    <svg class=\"fill-current w-4 h-4\" viewBox=\"0 0 20 20\"><path d=\"M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z\" clip-rule=\"evenodd\" fill-rule=\"evenodd\"></path></svg>\n  </div>\n</div>\n";
+var checkboxCode = "\n<label class=\"text-gray-700\">\n  <input type=\"checkbox\" value=\"\">\n  <span class=\"ml-1\">Lorem ipsum dolor sit</span>\n</label>\n";
+var radioCode = "\n<label class=\"text-gray-700\">\n  <input type=\"radio\" value=\"\">\n  <span class=\"ml-1\">Lorem ipsum dolor sit</span>\n</label>\n";
+var textareaCode = "\n<textarea class=\"border rounded-lg px-3 py-2 h-16 text-gray-700 placeholder-gray-600 text-base w-full focus:shadow-outline\"></textarea>\n";
+var labelOverInputCode = "\n<div class=\"text-gray-700\">\n  <label class=\"block mb-1\" for=\"forms-labelOverInputCode\">Full name</label>\n  <input class=\"border rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"text\" placeholder=\"Regular input\" id=\"forms-labelOverInputCode\">\n</div>\n";
+var labelLeftInputCode = "\n<div class=\"text-gray-700 md:flex md:items-center\">\n  <div class=\"mb-1 md:mb-0 md:w-1/3\">\n    <label for=\"forms-labelLeftInputCode\">Full name</label>\n  </div>\n  <div class=\"md:w-2/3 md:flex-grow\">\n    <input class=\"border rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"text\" placeholder=\"Regular input\" id=\"forms-labelLeftInputCode\">\n  </div>\n</div>\n";
+var formGridCode = "\n<form class=\"text-gray-700 space-y-4\">\n  <div class=\"flex flex-wrap\">\n    <div class=\"w-full\">\n      <label class=\"block mb-1\" for=\"formGridCode_card\">Card number</label>\n      <input class=\"border rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"text\" id=\"formGridCode_card\">\n    </div>\n  </div>\n  <div class=\"flex flex-wrap -mx-2 space-y-4 md:space-y-0\">\n    <div class=\"w-full md:w-1/2 px-2\">\n      <label class=\"block mb-1\" for=\"formGridCode_name\">First name</label>\n      <input class=\"border rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"text\" id=\"formGridCode_name\">\n    </div>\n    <div class=\"w-full md:w-1/2 px-2\">\n      <label class=\"block mb-1\" for=\"formGridCode_last\">Last name</label>\n      <input class=\"border rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"text\" id=\"formGridCode_last\">\n    </div>\n  </div>\n  <div class=\"flex flex-wrap -mx-2 space-y-4 md:space-y-0\">\n    <div class=\"w-full md:w-1/3 px-2\">\n      <label class=\"block mb-1\" for=\"formGridCode_month\">Month</label>\n      <input class=\"border rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"text\" id=\"formGridCode_month\">\n    </div>\n    <div class=\"w-full md:w-1/3 px-2\">\n      <label class=\"block mb-1\" for=\"formGridCode_year\">Year</label>\n      <input class=\"border rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"text\" id=\"formGridCode_year\">\n    </div>\n    <div class=\"w-full md:w-1/3 px-2\">\n      <label class=\"block mb-1\" for=\"formGridCode_cvc\">CVC</label>\n      <input class=\"border rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"text\" id=\"formGridCode_cvc\">\n    </div>\n  </div>\n</form>\n";
+var iconRightInputCode = "\n<div class=\"relative text-gray-700\">\n  <input class=\"border rounded-lg pl-3 pr-8 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"text\" placeholder=\"Regular input\">\n  <div class=\"pointer-events-none absolute inset-y-0 right-0 flex items-center px-2\">\n    <svg class=\"fill-current w-4 h-4\" viewBox=\"0 0 20 20\"><path d=\"M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z\" clip-rule=\"evenodd\" fill-rule=\"evenodd\"></path></svg>\n  </div>\n</div>\n";
+var iconLeftInputCode = "\n<div class=\"relative text-gray-700\">\n  <input class=\"border rounded-lg pr-3 pl-8 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"text\" placeholder=\"Regular input\">\n  <div class=\"pointer-events-none absolute inset-y-0 left-0 flex items-center px-2\">\n    <svg class=\"fill-current w-4 h-4\" viewBox=\"0 0 20 20\"><path d=\"M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z\"></path><path d=\"M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z\"></path></svg>\n  </div>\n</div>\n";
+var buttonRightInputCode = "\n<div class=\"relative text-gray-700\">\n  <input class=\"border rounded-lg pl-3 pr-8 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"text\" placeholder=\"Regular input\">\n  <button class=\"absolute inset-y-0 right-0 flex items-center px-4 bg-indigo-600 hover:bg-indigo-500 focus:bg-indigo-700 text-white rounded-r-lg font-bold\">Click</button>\n</div>\n";
+var helperTextCode = "\n<div class=\"text-gray-700\">\n  <label class=\"block mb-1\" for=\"forms-helpTextCode\">Password</label>\n  <input class=\"border rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"password\" id=\"forms-helpTextCode\" aria-describedby=\"passwordHelp\">\n  <span class=\"text-xs text-gray-600\" id=\"passwordHelp\">Your password must be at least 6 characters long.</span>\n</div>\n";
+var validationInputCode = "\n<div class=\"text-gray-700 mb-4\">\n  <label class=\"block mb-1\" for=\"forms-validationInputCode_error\">Password</label>\n  <input class=\"border border-red-700 rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"password\" id=\"forms-validationInputCode_error\" aria-describedby=\"passwordHelp\">\n  <span class=\"text-xs text-red-700\" id=\"passwordHelp\">Your password is too short.</span>\n</div>\n<div class=\"text-gray-700\">\n  <label class=\"block mb-1\" for=\"forms-validationInputCode_success\">Password</label>\n  <input class=\"border border-green-500 rounded-lg px-3 h-10 placeholder-gray-600 text-base w-full focus:shadow-outline\" type=\"password\" id=\"forms-validationInputCode_success\" aria-describedby=\"passwordHelp\">\n  <span class=\"text-xs text-green-700\" id=\"passwordHelp\">Your password is strong.</span>\n</div>\n";
+
+function Forms() {
+  return __jsx(_containers_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 149,
+      columnNumber: 5
+    }
+  }, __jsx(_components_SEO__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    title: "Forms",
+    url: "docs/forms",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 150,
       columnNumber: 7
     }
-  }), __jsx("div", {
-    className: "w-full px-6 mx-auto lg:max-w-screen-xl",
+  }), __jsx(_components_Headings_H2__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 152,
       columnNumber: 7
     }
-  }, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    isOpen: isOpen,
-    setIsOpen: setIsOpen,
+  }, "Forms"), __jsx(_components_Text_Lead__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 153,
+      columnNumber: 7
+    }
+  }, "Form components using Tailwind CSS to speed up your project."), __jsx("hr", {
+    className: "my-8",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 154,
+      columnNumber: 7
+    }
+  }), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "simple-input",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 156,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 157,
       columnNumber: 9
     }
-  }), __jsx("div", {
-    className: "lg:hidden",
+  }, "Simple input"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 158,
       columnNumber: 9
     }
-  }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    isOpen: isOpen,
+  }, "A simple input component."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: simpleInputCode,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 11
-    }
-  })), __jsx("div", {
-    className: mainClassName,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 159,
       columnNumber: 9
     }
-  }, __jsx("div", {
-    className: "mt-8 md:mt-16",
+  })), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "simple-select",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 11
+      lineNumber: 162,
+      columnNumber: 7
     }
-  }, __jsx("div", {
-    className: "flex flex-col items-center md:flex-row",
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 13
+      lineNumber: 163,
+      columnNumber: 9
     }
-  }, __jsx("div", {
-    className: "my-12 md:my-0 md:w-1/2",
+  }, "Simple select"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 15
+      lineNumber: 164,
+      columnNumber: 9
     }
-  }, __jsx("h1", {
-    className: "mb-2 text-4xl font-bold tracking-tight text-center text-gray-700 md:text-left lg:text-5xl",
+  }, "A simple select component."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: simpleSelectCode,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 17
+      lineNumber: 165,
+      columnNumber: 9
     }
-  }, "Tailwind Starter Kit"), __jsx("p", {
-    className: "max-w-md mx-auto mb-8 text-lg leading-normal text-center text-gray-700 md:mx-0 md:text-left",
+  })), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "checkbox",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
-      columnNumber: 17
+      lineNumber: 168,
+      columnNumber: 7
     }
-  }, "A library of components made with Tailwind CSS to bootstrap your projects"), __jsx("div", {
-    className: "flex items-center justify-center md:justify-start",
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
-      columnNumber: 17
+      lineNumber: 169,
+      columnNumber: 9
     }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "/docs/alerts",
+  }, "Checkbox"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
-      columnNumber: 19
+      lineNumber: 170,
+      columnNumber: 9
     }
-  }, __jsx("a", {
-    className: "inline-flex items-center px-4 py-2 mr-4 font-bold text-white transition-colors duration-150 ease-in-out bg-indigo-600 rounded-lg shadow-lg hover:bg-indigo-500 focus:shadow-outline",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33,
-      columnNumber: 21
-    }
-  }, "Read docs")), __jsx("a", {
-    className: "inline-flex items-center px-4 py-2 font-bold text-gray-700 transition-colors duration-150 ease-in-out bg-gray-100 rounded-lg shadow-lg hover:bg-gray-200 focus:shadow-outline",
-    href: "https://twitter.com/intent/tweet?text=Tailwind Starter Kit - A library of components made with Tailwind CSS to bootstrap your projects&via=estevanmaito&url=https://estevanmaito.github.io/tailwind-starter-kit",
+  }, "A checkbox component. If you're looking for a more elaborate checkbox, I recommend using", ' ', __jsx("a", {
+    className: "font-bold underline hover:text-gray-600",
+    href: "https://tailwindcss-custom-forms.netlify.app/",
     target: "_blank",
+    rel: "noopener noreferrer",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
-      columnNumber: 19
+      lineNumber: 172,
+      columnNumber: 11
     }
-  }, __jsx("svg", {
-    className: "h-4 mr-2 fill-current",
-    viewBox: "0 0 24 24",
+  }, "Custom Forms"), ", an official library to extend the look of general form elements with custom CSS."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: checkboxCode,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
-      columnNumber: 21
+      lineNumber: 181,
+      columnNumber: 9
     }
-  }, __jsx("path", {
-    d: "M8.2,20.2c6.5,0,11.7-5.2,11.8-11.6c0-0.1,0-0.1,0-0.2c0-0.2,0-0.4,0-0.5c0.8-0.6,1.5-1.3,2.1-2.2c-0.8,0.3-1.6,0.6-2.4,0.7c0.9-0.5,1.5-1.3,1.8-2.3c-0.8,0.5-1.7,0.8-2.6,1c-1.6-1.7-4.2-1.7-5.9-0.1c-1.1,1-1.5,2.5-1.2,3.9C8.5,8.7,5.4,7.1,3.3,4.6c-1.1,1.9-0.6,4.3,1.3,5.5c-0.7,0-1.3-0.2-1.9-0.5l0,0c0,2,1.4,3.7,3.3,4.1c-0.6,0.2-1.2,0.2-1.9,0.1c0.5,1.7,2.1,2.8,3.9,2.9c-1.7,1.4-3.9,2-6.1,1.7C3.8,19.5,6,20.2,8.2,20.2",
+  })), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "radio",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
-      columnNumber: 23
+      lineNumber: 184,
+      columnNumber: 7
     }
-  })), "Share"))), __jsx("div", {
-    className: "md:w-1/2",
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
-      columnNumber: 15
+      lineNumber: 185,
+      columnNumber: 9
     }
-  }, __jsx("img", {
-    className: "w-full",
-    src: "/tailwind-starter-kit/undraw_product_teardown.svg",
-    alt: "Smartphone with puzzle pieces",
+  }, "Radio"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
-      columnNumber: 17
+      lineNumber: 186,
+      columnNumber: 9
     }
-  })))))));
+  }, "A radio component. If you're looking for a more elaborate radio button, I recommend using", ' ', __jsx("a", {
+    className: "font-bold underline hover:text-gray-600",
+    href: "https://tailwindcss-custom-forms.netlify.app/",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 188,
+      columnNumber: 11
+    }
+  }, "Custom Forms"), ", an official library to extend the look of general form elements with custom CSS."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: radioCode,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 197,
+      columnNumber: 9
+    }
+  })), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "textarea",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 200,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 201,
+      columnNumber: 9
+    }
+  }, "Textarea"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 202,
+      columnNumber: 9
+    }
+  }, "A simple textarea component."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: textareaCode,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 203,
+      columnNumber: 9
+    }
+  })), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "labelOverInputCode",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 206,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 207,
+      columnNumber: 9
+    }
+  }, "Label over"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 208,
+      columnNumber: 9
+    }
+  }, "A simple input component with label over."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: labelOverInputCode,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 209,
+      columnNumber: 9
+    }
+  })), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "labelLeftInputCode",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 212,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 213,
+      columnNumber: 9
+    }
+  }, "Label left"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 214,
+      columnNumber: 9
+    }
+  }, "A responsive form group with label and input, with left text on desktop and over the input on mobile."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: labelLeftInputCode,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 218,
+      columnNumber: 9
+    }
+  })), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "formGridCode",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 221,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 222,
+      columnNumber: 9
+    }
+  }, "Form grid"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 223,
+      columnNumber: 9
+    }
+  }, "A responsive form grid."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: formGridCode,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 224,
+      columnNumber: 9
+    }
+  })), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "iconRightInputCode",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 227,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 228,
+      columnNumber: 9
+    }
+  }, "Input with icon right"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 229,
+      columnNumber: 9
+    }
+  }, "Input with SVG icon right."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: iconRightInputCode,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 230,
+      columnNumber: 9
+    }
+  })), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "iconLeftInputCode",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 233,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 234,
+      columnNumber: 9
+    }
+  }, "Input with icon left"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 235,
+      columnNumber: 9
+    }
+  }, "Input with SVG icon left."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: iconLeftInputCode,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 236,
+      columnNumber: 9
+    }
+  })), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "buttonRightInputCode",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 239,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 240,
+      columnNumber: 9
+    }
+  }, "Input with button right"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 241,
+      columnNumber: 9
+    }
+  }, "Input with button inside."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: buttonRightInputCode,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 242,
+      columnNumber: 9
+    }
+  })), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "helperTextCode",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 245,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 246,
+      columnNumber: 9
+    }
+  }, "Helper text"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 247,
+      columnNumber: 9
+    }
+  }, "Input with bottom helper text."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: helperTextCode,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 248,
+      columnNumber: 9
+    }
+  })), __jsx(_components_ExampleSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    id: "validationInputCode",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 251,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Headings_H4__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 252,
+      columnNumber: 9
+    }
+  }, "Input with validation"), __jsx(_components_Text_P__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 253,
+      columnNumber: 9
+    }
+  }, "Input with bottom validation text and colored borders."), __jsx(_components_CodeCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    lang: "html",
+    code: validationInputCode,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 254,
+      columnNumber: 9
+    }
+  })));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Home);
+/* harmony default export */ __webpack_exports__["default"] = (Forms);
 
 /***/ }),
 
@@ -5556,14 +7414,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 2:
-/*!**************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cindex.jsx&hotRouterUpdates=true ***!
-  \**************************************************************************************************************************/
+/***/ 4:
+/*!*********************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fdocs%2Fforms&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cdocs%5Cforms.jsx&hotRouterUpdates=true ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cindex.jsx&hotRouterUpdates=true! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cindex.jsx&hotRouterUpdates=true!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fdocs%2Fforms&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cdocs%5Cforms.jsx&hotRouterUpdates=true! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fdocs%2Fforms&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cdocs%5Cforms.jsx&hotRouterUpdates=true!./");
 
 
 /***/ }),
@@ -5579,5 +7437,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=index.js.map
+},[[4,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=forms.js.map

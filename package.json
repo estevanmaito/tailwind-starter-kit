@@ -1,6 +1,6 @@
 {
   "name": "tailwind-starter-kit",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "scripts": {
     "dev": "next dev",
     "build": "env NODE_ENV=production next build && next export -o docs/",
