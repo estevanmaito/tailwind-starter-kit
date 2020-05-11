@@ -15,4 +15,8 @@ export default [
     title: 'Badge',
     url: '/docs/badge',
   },
+  {
+    title: 'Cards',
+    url: '/docs/cards',
+  },
 ]
