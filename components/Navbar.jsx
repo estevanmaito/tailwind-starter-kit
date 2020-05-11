@@ -28,9 +28,9 @@ function Navbar({ isOpen, setIsOpen }) {
             </div>
             {/* Bigger pl to accommodate the icon */}
             <input
-              className="w-full py-2 pl-10 pr-4 placeholder-gray-600 transition-shadow duration-100 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed focus:bg-white focus:shadow-lg"
-              placeholder="Waiting for Algolia to crawl"
-              disabled
+              className="w-full py-2 pl-10 pr-4 placeholder-gray-600 transition-shadow duration-100 bg-gray-100 border border-gray-200 rounded-lg focus:bg-white focus:shadow-lg"
+              id="algolia-search"
+              placeholder="Search for components"
             />
           </div>
         </div>
