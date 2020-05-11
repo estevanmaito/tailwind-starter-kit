@@ -18,26 +18,13 @@ class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `.algolia-autocomplete { width: 100% !important; }`,
             }}></style>
+          <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script
-            type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{
-              __html: `
-            docsearch({
-              apiKey: 'de0ea1927c3b929b1dd95baee343cfb4',
-              indexName: 'estevanmaito_tailwind-starter-kit',
-              inputSelector: '#algolia-search',
-              debug: false // Set debug to true if you want to inspect the dropdown
-            });
-          `,
-            }}
-          />
         </body>
       </Html>
     )

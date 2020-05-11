@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 function Navbar({ isOpen, setIsOpen }) {
+  const [isSearchDisabled, setIsSearchDisabled] = useState(false)
+
+  useEffect(() => {
+    if (window.docsearch) {
+      window.docsearch({
+        apiKey: 'de0ea1927c3b929b1dd95baee343cfb4',
+        indexName: 'estevanmaito_tailwind-starter-kit',
+        inputSelector: '#algolia-search',
+      })
+    } else {
+      console.warn('Search has failed to load')
+      setIsSearchDisabled(true)
+    }
+  }, [])
+
   return (
     <header className="fixed inset-x-0 top-0 z-20 flex items-center h-16 max-w-screen-xl px-6 mx-auto text-gray-700 bg-white">
       {/* Logo */}
@@ -23,6 +38,7 @@ function Navbar({ isOpen, setIsOpen }) {
               className="w-full py-2 pl-10 pr-4 placeholder-gray-600 transition-shadow duration-100 bg-gray-100 border border-gray-200 rounded-lg focus:bg-white focus:shadow-lg"
               id="algolia-search"
               placeholder="Search for components"
+              disabled={isSearchDisabled}
             />
             <div className="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-600 pointer-events-none">
               {/* fill-current will make the SVG the same color as the current from parent */}
