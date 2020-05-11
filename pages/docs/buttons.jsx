@@ -6,6 +6,7 @@ import Lead from '../../components/Text/Lead'
 import P from '../../components/Text/P'
 import CodeCard from '../../components/CodeCard'
 import ExampleSection from '../../components/ExampleSection'
+import SEO from '../../components/SEO'
 
 const buttonSizesCode = `
 <button class="rounded-lg px-6 h-12 text-lg text-indigo-100 bg-indigo-700 focus:shadow-outline hover:bg-indigo-800 transition-colors duration-150">Large</button>
@@ -88,6 +89,8 @@ const dropdownLeftCode = `
 function Buttons() {
   return (
     <Layout>
+      <SEO title="Buttons" url="docs/buttons" />
+
       <H2>Buttons</H2>
       <Lead>Button components using Tailwind CSS to speed up your project.</Lead>
       <hr className="my-8" />

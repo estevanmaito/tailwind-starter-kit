@@ -6,6 +6,7 @@ import Lead from '../../components/Text/Lead'
 import P from '../../components/Text/P'
 import CodeCard from '../../components/CodeCard'
 import ExampleSection from '../../components/ExampleSection'
+import SEO from '../../components/SEO'
 
 const cardImageCode = `
 <div class="max-w-xs rounded-lg overflow-hidden shadow-lg">
@@ -55,6 +56,8 @@ const cardTextOverImageCode = `
 function Cards() {
   return (
     <Layout>
+      <SEO title="Cards" url="docs/cards" />
+
       <H2>Cards</H2>
       <Lead>Card components using Tailwind CSS to speed up your project.</Lead>
       <hr className="my-8" />

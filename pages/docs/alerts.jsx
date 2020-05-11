@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../../components/SEO'
 import Layout from '../../containers/Layout'
 import H2 from '../../components/Headings/H2'
 import H4 from '../../components/Headings/H4'
@@ -66,6 +67,8 @@ const alertBorderedCode = `
 function Alerts() {
   return (
     <Layout>
+      <SEO title="Alerts" url="docs/alerts" />
+
       <H2>Alerts</H2>
       <Lead>Alert components using Tailwind CSS to speed up your project.</Lead>
       <hr className="my-8" />

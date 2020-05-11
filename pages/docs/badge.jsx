@@ -6,6 +6,7 @@ import Lead from '../../components/Text/Lead'
 import P from '../../components/Text/P'
 import CodeCard from '../../components/CodeCard'
 import ExampleSection from '../../components/ExampleSection'
+import SEO from '../../components/SEO'
 
 const badgeSizesCode = `
 <span class="rounded-full h-2 w-2 inline-block bg-red-600"></span>
@@ -39,6 +40,8 @@ const badgeTextCode = `
 function Badge() {
   return (
     <Layout>
+      <SEO title="Badge" url="docs/badge" />
+
       <H2>Badge</H2>
       <Lead>Badge component using Tailwind CSS to speed up your project.</Lead>
       <hr className="my-8" />

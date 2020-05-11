@@ -6,6 +6,7 @@ import Lead from '../../components/Text/Lead'
 import P from '../../components/Text/P'
 import CodeCard from '../../components/CodeCard'
 import ExampleSection from '../../components/ExampleSection'
+import SEO from '../../components/SEO'
 
 const simpleInputCode = `
 <input class="border rounded-lg px-4 h-12 text-gray-700 placeholder-gray-600 text-lg w-full focus:shadow-outline mb-2" type="text" placeholder="Large input">
@@ -146,6 +147,8 @@ const validationInputCode = `
 function Forms() {
   return (
     <Layout>
+      <SEO title="Forms" url="docs/forms" />
+
       <H2>Forms</H2>
       <Lead>Form components using Tailwind CSS to speed up your project.</Lead>
       <hr className="my-8" />

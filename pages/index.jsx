@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import Link from 'next/link'
+import SEO from '../components/SEO'
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,52 +11,7 @@ function Home() {
 
   return (
     <>
-      <Head>
-        <title>Tailwind CSS Starter Kit</title>
-
-        <meta
-          name="description"
-          content="A library of components made with Tailwind CSS to bootstrap your projects"
-        />
-        <link rel="canonical" href="https://estevanmaito.github.io/tailwind-starter-kit" />
-        <meta name="author" content="Nome do autor do site" />
-        <meta name="robots" content="index" />
-
-        <meta itemprop="name" content="Tailwind CSS Starter Kit" />
-        <meta
-          itemprop="description"
-          content="A library of components made with Tailwind CSS to bootstrap your projects"
-        />
-        <meta
-          itemprop="image"
-          content="https://estevanmaito.github.io/tailwind-starter-kit/social.png"
-        />
-
-        <meta property="og:title" content="Tailwind CSS Starter Kit" />
-        <meta
-          property="og:description"
-          content="A library of components made with Tailwind CSS to bootstrap your projects"
-        />
-        <meta property="og:url" content="https://estevanmaito.github.io/tailwind-starter-kit" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://estevanmaito.github.io/tailwind-starter-kit/social.png"
-        />
-
-        <meta name="twitter:title" content="Tailwind CSS Starter Kit" />
-        <meta
-          name="twitter:description"
-          content="A library of components made with Tailwind CSS to bootstrap your projects"
-        />
-        <meta name="twitter:url" content="https://estevanmaito.github.io/tailwind-starter-kit" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:image"
-          content="https://estevanmaito.github.io/tailwind-starter-kit/social.png"
-        />
-        <meta name="twitter:creator" content="@estevanmaito" />
-      </Head>
+      <SEO />
 
       <div className="w-full px-6 mx-auto lg:max-w-screen-xl">
         <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
