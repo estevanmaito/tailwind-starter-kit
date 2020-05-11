@@ -97,9 +97,9 @@ function Navbar(_ref) {
       columnNumber: 17
     }
   }))), __jsx("input", {
-    className: "w-full py-2 pl-10 pr-4 placeholder-gray-600 transition-shadow duration-100 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed focus:bg-white focus:shadow-lg",
-    placeholder: "Waiting for Algolia to crawl",
-    disabled: true,
+    className: "w-full py-2 pl-10 pr-4 placeholder-gray-600 transition-shadow duration-100 bg-gray-100 border border-gray-200 rounded-lg focus:bg-white focus:shadow-lg",
+    id: "algolia-search",
+    placeholder: "Search for components",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -5555,7 +5555,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!**************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5Cwindmill%5Cpages%5Cindex.jsx&hotRouterUpdates=true ***!
   \**************************************************************************************************************************/
@@ -5578,5 +5578,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
