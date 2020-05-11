@@ -298,7 +298,7 @@ function Navbar(_ref) {
       columnNumber: 9
     }
   }, isOpen ? __jsx("svg", {
-    className: "w-4 h-4 fill-current",
+    className: "w-6 h-6 fill-current",
     viewBox: "0 0 20 20",
     __self: this,
     __source: {
@@ -317,7 +317,7 @@ function Navbar(_ref) {
       columnNumber: 15
     }
   })) : __jsx("svg", {
-    className: "w-4 h-4 fill-current",
+    className: "w-6 h-6 fill-current",
     viewBox: "0 0 20 20",
     __self: this,
     __source: {
@@ -686,7 +686,7 @@ function Sidebar(_ref) {
 
   var isOpen = _ref.isOpen;
   var router = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["useRouter"])();
-  var navClasses = isOpen ? 'w-full fixed inset-0 pt-16 h-full text-gray-600 lg:block lg:w-1/4 xl:w-1/5 bg-white z-10' : 'hidden w-full text-gray-600 lg:block lg:w-1/4 xl:w-1/5 bg-white z-10';
+  var navClasses = isOpen ? 'w-full fixed inset-0 pt-16 h-full text-gray-800 lg:block lg:w-1/4 xl:w-1/5 bg-white z-10' : 'hidden w-full text-gray-800 lg:block lg:w-1/4 xl:w-1/5 bg-white z-10';
   return __jsx("nav", {
     className: navClasses,
     __self: this,
@@ -712,7 +712,7 @@ function Sidebar(_ref) {
       columnNumber: 9
     }
   }, __jsx("h5", {
-    className: "text-xs font-bold tracking-normal text-gray-500 uppercase",
+    className: "text-xs font-bold tracking-normal text-gray-700 uppercase",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -745,7 +745,7 @@ function Sidebar(_ref) {
         columnNumber: 17
       }
     }, __jsx("a", {
-      className: "hover:text-gray-800",
+      className: "inline-block hover:text-gray-900 hover:font-semibold",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
@@ -7221,6 +7221,9 @@ __webpack_require__.r(__webpack_exports__);
 }, {
   title: 'Cards',
   url: '/docs/cards'
+}, {
+  title: 'Avatars',
+  url: '/docs/avatars'
 }]);
 
 /***/ }),
