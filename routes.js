@@ -23,4 +23,8 @@ export default [
     title: 'Avatars',
     url: '/docs/avatars',
   },
+  {
+    title: 'Pagination',
+    url: '/docs/pagination',
+  },
 ]
