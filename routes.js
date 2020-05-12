@@ -27,4 +27,8 @@ export default [
     title: 'Pagination',
     url: '/docs/pagination',
   },
+  {
+    title: 'Breadcrumbs',
+    url: '/docs/breadcrumbs',
+  },
 ]
