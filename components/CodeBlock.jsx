@@ -2,6 +2,7 @@ import React from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { mdx } from '@mdx-js/react'
+import theme from 'prism-react-renderer/themes/vsDark'
 
 export default ({ children, className, live, render }) => {
   const language = className.replace(/language-/, '')
@@ -12,9 +13,14 @@ export default ({ children, className, live, render }) => {
           code={children}
           transformCode={(code) => '/** @jsx mdx */' + `<>${code}</>`}
           scope={{ mdx }}
-          {...defaultProps}>
+          theme={theme}>
           <LivePreview className="p-4 border-t border-l border-r rounded-t-lg" />
-          <LiveEditor className="overflow-x-auto break-normal" />
+          <LiveEditor
+            className="overflow-x-auto break-normal"
+            style={{
+              fontFamily: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+            }}
+          />
           <LiveError />
         </LiveProvider>
       </div>
