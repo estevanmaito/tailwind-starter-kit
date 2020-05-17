@@ -1,7 +1,5 @@
 import React from 'react'
-import App from 'next/app'
 import '../css/tailwind.css'
-import '../css/prism-dracula.css'
 import { MDXProvider } from '@mdx-js/react'
 
 import CodeBlock from '../components/CodeBlock'
