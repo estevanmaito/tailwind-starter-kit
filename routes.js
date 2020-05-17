@@ -1,3 +1,4 @@
+// TODO: cycle through /pages files and create an index
 export default [
   {
     title: 'Alerts',
