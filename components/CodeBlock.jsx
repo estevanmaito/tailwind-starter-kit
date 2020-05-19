@@ -10,7 +10,7 @@ export default ({ children, className, live, render }) => {
     return (
       <div className="overflow-hidden rounded-lg">
         <LiveProvider
-          code={children}
+          code={children.trim()}
           transformCode={(code) => '/** @jsx mdx */' + `<>${code}</>`}
           scope={{ mdx }}
           theme={theme}>
