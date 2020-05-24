@@ -8,21 +8,31 @@ export default ({ children, className, live, render }) => {
   const language = className.replace(/language-/, '')
   if (live) {
     return (
-      <div className="overflow-hidden rounded-lg">
+      <div className="flex flex-col overflow-hidden rounded-lg">
         <LiveProvider
           code={children.trim()}
           transformCode={(code) => '/** @jsx mdx */' + `<>${code}</>`}
           scope={{ mdx }}
           theme={theme}>
           <LivePreview className="p-4 border-t border-l border-r rounded-t-lg" />
-          <LiveEditor
-            className="overflow-x-auto break-normal"
-            style={{
-              fontFamily: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-            }}
-            language={language}
-          />
-          <LiveError />
+          <style dangerouslySetInnerHTML={{
+            __html: `
+          .live-editor > pre,
+          .live-editor > textarea {
+            white-space: pre !important;
+          }
+          `}}>
+          </style>
+          <div className="flex-grow flex-shrink overflow-x-auto">
+            <LiveEditor
+              className="float-left min-w-full overflow-hidden live-editor"
+              style={{
+                fontFamily: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+              }}
+              language={language}
+            />
+            <LiveError />
+          </div>
         </LiveProvider>
       </div>
     )
