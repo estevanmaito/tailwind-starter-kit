@@ -3,7 +3,7 @@
   "version": "0.1.9",
   "scripts": {
     "dev": "next dev",
-    "build": "env NODE_ENV=production next build && next export -o docs/",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
