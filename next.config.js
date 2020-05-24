@@ -8,12 +8,12 @@ module.exports = withMdxEnhanced({
   remarkPlugins: [],
   rehypePlugins: [],
   extendFrontMatter: {
-    process: (mdxContent, frontMatter) => {},
+    process: (mdxContent, frontMatter) => { },
     phase: 'prebuild|loader|both',
   },
 })({
   // pageExtensions: ['js', 'jsx', 'mdx'],
-  experimental: {
-    basePath: isProd ? '/tailwind-starter-kit' : '',
-  },
+  // experimental: {
+  //   basePath: isProd ? '/tailwind-starter-kit' : '',
+  // },
 })
