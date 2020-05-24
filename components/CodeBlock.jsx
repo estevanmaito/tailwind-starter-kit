@@ -2,7 +2,7 @@ import React from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { mdx } from '@mdx-js/react'
-import theme from 'prism-react-renderer/themes/vsDark'
+import theme from 'prism-react-renderer/themes/nightOwl'
 
 export default ({ children, className, live, render }) => {
   const language = className.replace(/language-/, '')
@@ -20,6 +20,7 @@ export default ({ children, className, live, render }) => {
             style={{
               fontFamily: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
             }}
+            language={language}
           />
           <LiveError />
         </LiveProvider>
