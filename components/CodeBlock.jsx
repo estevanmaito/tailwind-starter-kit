@@ -15,14 +15,6 @@ export default ({ children, className, live, render }) => {
           scope={{ mdx }}
           theme={theme}>
           <LivePreview className="p-4 border-t border-l border-r rounded-t-lg" />
-          <style dangerouslySetInnerHTML={{
-            __html: `
-          .live-editor > pre,
-          .live-editor > textarea {
-            white-space: pre !important;
-          }
-          `}}>
-          </style>
           <div className="flex-grow flex-shrink overflow-x-auto">
             <LiveEditor
               className="float-left min-w-full overflow-hidden live-editor"

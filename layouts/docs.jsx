@@ -17,6 +17,13 @@ export default (frontMatter) => {
       : 'max-w-full lg:relative lg:w-3/4 xl:w-3/5 xl:pl-12 markdown mb-16'
     return (
       <div className="w-full px-6 mx-auto sm:max-w-screen-sm lg:max-w-screen-xl">
+        <style dangerouslySetInnerHTML={{
+          __html: `
+          .live-editor > pre,
+          .live-editor > textarea {
+            white-space: pre !important;
+          }
+          `}} />
         <SEO title={frontMatter.title} url={`docs/${fileNameToURL(frontMatter)}`} />
         <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
         <div className="flex mt-24">
