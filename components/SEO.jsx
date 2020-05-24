@@ -13,14 +13,14 @@ function SEO({
   title,
   description = 'A library of components made with Tailwind CSS to bootstrap your projects',
   url = '',
-  socialImage = 'https://estevanmaito.github.io/tailwind-starter-kit/share.png',
+  socialImage = 'https://tailwind-starter-kit.now.sh/share.png',
 }) {
   const pageTitle = title ? `${title} - Tailwind CSS Starter Kit` : 'Tailwind CSS Starter Kit'
 
   return (
     <Head>
       <meta name="description" content={description} />
-      <link rel="canonical" href={`https://estevanmaito.github.io/tailwind-starter-kit/${url}`} />
+      <link rel="canonical" href={`https://tailwind-starter-kit.now.sh/${url}`} />
       <meta name="author" content="Estevan Maito" />
       <meta name="robots" content="index" />
 
@@ -32,7 +32,7 @@ function SEO({
       <meta property="og:description" content={description} />
       <meta
         property="og:url"
-        content={`https://estevanmaito.github.io/tailwind-starter-kit/${url}`}
+        content={`https://tailwind-starter-kit.now.sh/${url}`}
       />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={socialImage} />
@@ -41,7 +41,7 @@ function SEO({
       <meta name="twitter:description" content={description} />
       <meta
         name="twitter:url"
-        content={`https://estevanmaito.github.io/tailwind-starter-kit/${url}`}
+        content={`https://tailwind-starter-kit.now.sh/${url}`}
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image" content={socialImage} />
