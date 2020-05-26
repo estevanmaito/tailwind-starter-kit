@@ -19,7 +19,7 @@ function Home() {
           <Sidebar isOpen={isOpen} />
         </div>
         <div className={mainClassName}>
-          <div className="mt-8 md:mt-16">
+          <div className="mt-8 md:mt-24">
             <div className="flex flex-col items-center md:flex-row">
               <div className="my-12 md:my-0 md:w-1/2">
                 <h1 className="mb-2 text-4xl font-bold tracking-tight text-center text-gray-700 md:text-left lg:text-5xl">
