@@ -22,6 +22,25 @@ function Home() {
           <div className="mt-8 md:mt-24">
             <div className="flex flex-col items-center md:flex-row">
               <div className="my-12 md:my-0 md:w-1/2">
+                <Link href="/learn">
+                  <a
+                    class="inline-flex items-center px-1 mb-6 bg-gray-100 rounded-full focus:outline-none focus:shadow-outline-gray"
+                  >
+                    <span
+                      class="px-2 ml-px mr-3 text-xs font-medium text-teal-100 uppercase bg-teal-500 rounded-full"
+                    >
+                      New
+                  </span>
+                    <span class="mr-3 text-sm leading-loose text-gray-700">Learn Tailwind CSS with an interactive tutorial</span>
+                    <svg class="w-5 h-5 text-gray-600 fill-current" viewBox="0 0 20 20">
+                      <path
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"
+                        fill-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </a>
+                </Link>
                 <h1 className="mb-2 text-4xl font-bold tracking-tight text-center text-gray-700 md:text-left lg:text-5xl">
                   Tailwind Starter Kit
                 </h1>
@@ -29,9 +48,10 @@ function Home() {
                   A library of components made with Tailwind CSS to bootstrap your projects
                 </p>
                 <div className="flex items-center justify-center md:justify-start">
+
                   <Link href="/docs/alerts">
                     <a className="inline-flex items-center px-4 py-2 mr-4 font-bold text-white transition-colors duration-150 ease-in-out bg-indigo-600 rounded-lg shadow-lg hover:bg-indigo-500 focus:shadow-outline">
-                      Read docs
+                      Components
                     </a>
                   </Link>
 
