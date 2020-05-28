@@ -21,7 +21,7 @@ function Home() {
         <div className={mainClassName}>
           <div className="mt-8 md:mt-24">
             <div className="flex flex-col items-center md:flex-row">
-              <div className="my-12 md:my-0 md:w-1/2">
+              <div className="my-12 text-center md:text-left md:my-0 md:w-1/2">
                 <Link href="/learn">
                   <a
                     class="inline-flex items-center px-1 mb-6 bg-gray-100 rounded-full focus:outline-none focus:shadow-outline-gray"
@@ -41,10 +41,10 @@ function Home() {
                     </svg>
                   </a>
                 </Link>
-                <h1 className="mb-2 text-4xl font-bold tracking-tight text-center text-gray-700 md:text-left lg:text-5xl">
+                <h1 className="mb-2 text-4xl font-bold tracking-tight text-gray-700 lg:text-5xl">
                   Tailwind Starter Kit
                 </h1>
-                <p className="max-w-md mx-auto mb-8 text-lg leading-normal text-center text-gray-700 md:mx-0 md:text-left">
+                <p className="max-w-md mx-auto mb-8 text-lg leading-normal text-gray-700 md:mx-0">
                   A library of components made with Tailwind CSS to bootstrap your projects
                 </p>
                 <div className="flex items-center justify-center md:justify-start">
