@@ -1,5 +1,6 @@
 import React from 'react'
-import routes from '../routes'
+import componentRoutes from '../routes/component-routes'
+import learnRoutes from '../routes/learn-routes'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -13,12 +14,30 @@ function Sidebar({ isOpen }) {
   return (
     <nav className={navClasses}>
       <div className="h-full overflow-y-auto scrolling-touch lg:fixed">
-        <div className="p-6 overflow-y-auto lg:p-0">
+        <div className="m-6 overflow-y-auto lg:m-0 lg:mb-4">
+          <h5 className="mb-1 text-sm font-bold tracking-normal text-gray-700 uppercase lg:text-xs">
+            Learn
+          </h5>
+          <ul className="text-base font-medium lg:text-sm">
+            {learnRoutes.map((r) => (
+              <li
+                className={
+                  router.pathname.includes(r.url) ? 'text-indigo-600 font-semibold mb-1' : 'mb-1'
+                }
+                key={r.url}>
+                <Link href={r.url}>
+                  <a className="inline-block py-1 hover:font-semibold">{r.title}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="m-6 overflow-y-auto lg:m-0 lg:mb-4">
           <h5 className="mb-1 text-sm font-bold tracking-normal text-gray-700 uppercase lg:text-xs">
             Components
           </h5>
           <ul className="text-base font-medium lg:text-sm">
-            {routes.map((r) => (
+            {componentRoutes.map((r) => (
               <li
                 className={
                   router.pathname.includes(r.url) ? 'text-indigo-600 font-semibold mb-1' : 'mb-1'
