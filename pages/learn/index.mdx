@@ -1,0 +1,111 @@
+---
+layout: 'docs'
+title: 'Quick start'
+---
+
+import Spoiler from '../../components/Spoiler'
+
+# Getting started
+
+This interactive tutorial will guide you around the basic features of Tailwind CSS.
+
+---
+
+You should at least know some CSS, like how to change text, color, positions, etc. as Tailwind is buil on top of it and it will be much easier for you get your head around. [Start here if you don't know CSS](https://css-tricks.com/guides/beginner/).
+
+If you're coming from another CSS framework like Bootstrap, Bulma and Foundation (and many more), you're probably familiar with this mindset: you need a button, so you grab the class that creates one and put in you `button` element.
+
+<style dangerouslySetInnerHTML={{ __html: `.btn {
+      padding: 6px 12px;
+      background-color: #007bff;
+      border-radius: 3px;
+      color: white;
+  }`}}></style>
+
+<button className="btn">Hi there</button>
+
+But then you need a pill-shaped button, with green background, to match the style of your page, so you open a CSS file and write:
+
+```css
+.btn {
+  background-color: #38A169 !important;
+  border-radius: 50px !important;
+}
+```
+
+Suddenly you're writing modifications for every style.
+
+In Tailwind, I like to think that you have a different mindset. Instead of _I need a button_, you think of _how should this button look?_ You write exactly what you want, in one place.
+
+## Change the background color
+
+Tailwind is built around utility classes. Enough theory, show me the code!
+
+Do you think you can change the color of the `button` below to green, just by changing its class? (Go ahead, every editor is live 💪).
+
+```html live
+<button class="bg-blue-600">Make me green!</button>
+```
+
+<Spoiler>If you just replaced blue for green, congratulations! 🎉 Now it looks terrible.</Spoiler>
+
+`bg` utilities in Tailwind follow this format `bg-<color>-<value>`. `color` can be any of these:
+
+`black` , `white`, `gray`, `red`, `orange`, `yellow`, `green`, `teal`, `blue`, `indigo`, `purple` and `pink`
+
+While `value` goes from `100` to `900` (increases by 100), except for `black` and `white`, that are just... black and white.
+
+Read the [docs for background-color](https://tailwindcss.com/docs/background-color) for more (and to see all the colors).
+
+## Change the text color
+
+If `bg` changes the background, how could we change <u>**_text_**</u> colors? 🤐 Oh, I didn't say nothing. Keep the actual background class and try changing the color of **_text_** to `green-100`.
+
+```html live
+<button class="bg-green-600">Unreadable!</button>
+```
+
+<Spoiler>Yes, it's that simple! text-green-100 changed the text color, and now we can read it! 🎉 It's still awful.</Spoiler>
+
+The same rules that applied to `bg` are applied here, you just prepend the colors with `text`.
+
+Read the [docs for text color](https://tailwindcss.com/docs/text-color) for more.
+
+## The power of utilities
+
+This comes from the [official docs](https://tailwindcss.com/docs/utility-first):
+
+**You aren't wasting energy inventing class names**. No more adding silly class names like sidebar-inner-wrapper just to be able to style something, and no more agonizing over the perfect abstract name for something that's really just a flex container.
+
+**Your CSS stops growing**. Using a traditional approach, your CSS files get bigger every time you add a new feature. With utilities, everything is reusable so you rarely need to write new CSS.
+
+**Making changes feels safer**. CSS is global and you never know what you're breaking when you make a change. Classes in your HTML are local, so you can change them without worrying about something else breaking.
+
+## Fix padding
+
+There are four ways of adding padding: the same value for every side `p-`; the same value for left and right `px-`; the same value for top and bottom `py-` and individually for every side `pt-` (top), `pr-` (right), `pb-` (bottom), `pl-` (left). A value should come after the `-`.
+
+Add to this `button` the same padding for top and bottom: `2`; and the same padding for left and right: `4`. Oh and I forgot to tell you before, but there is no right or wrong answer, on every exercise. If you want to just draw your house using the editor below, feel free!
+
+```html live
+<button class="text-green-100 bg-green-600">Unreadable!</button>
+```
+
+<Spoiler>If you went for py-2 and px-4, that's the shorter. But it's ok to give every side an explicit value (although you may get tired). 🎉 I still wouldn't click this thing.</Spoiler>
+
+There is no one watching you here, try different values in the editor and see what you get 🧐
+
+There is no need to memorize any of these values, and you'll probably use the same ones everytime. Every `padding` utility class I showed you before, can receive one of these values: `px`, `0`, `1`, `2`, `3`, `4`, `5`, `6`, `8`, `10`, `12`, `16`, `20`, `24`, `32`, `40`, `48`, `56`, `64`. Eg.: `p-px`, `py-24`
+
+Ooof 😨 Calm down... They follow some logic (you don't need to make math everytime you use it, but it's good to know): every value is multiplied by `0.25rem` (except `px` that is just `1px`). So 4 is equivalent to `1rem`, 8 is `2rem`, 16... you got it.
+
+So, the smaller ones (below 10) are great for finer details, like a button. The bigger ones for moments you need bigger spaces, like between `divs`, etc.
+
+Read the [docs for padding](https://tailwindcss.com/docs/padding) for more.
+
+## Roundness
+
+What are you thinking of this? I would love to hear some feedback on what could be improved, made different, etc.
+
+*More soon. Updates on [@estevanmaito](http://twitter.com/estevanmaito)* 🐤
+        
