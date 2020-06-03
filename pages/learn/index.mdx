@@ -55,7 +55,7 @@ Do you think you can change the color of the `button` below to green, just by ch
 
 While `value` goes from `100` to `900` (increases by 100), except for `black` and `white`, that are just... black and white.
 
-Read the [docs for background-color](https://tailwindcss.com/docs/background-color) for more (and to see all the colors).
+Read the [docs for `background-color`](https://tailwindcss.com/docs/background-color) for more (and to see all the colors).
 
 ## Change the text color
 
@@ -91,7 +91,7 @@ Add to this `button` the same padding for top and bottom: `2`; and the same padd
 <button class="text-green-100 bg-green-600">Unreadable!</button>
 ```
 
-<Spoiler>If you went for py-2 and px-4, that's the shorter. But it's ok to give every side an explicit value (although you may get tired). 🎉 I still wouldn't click this thing.</Spoiler>
+<Spoiler>If you went for py-2 and px-4, that's the shorter way. But it's ok to give every side an explicit value (although you may get tired). 🎉 I still wouldn't click this thing.</Spoiler>
 
 There is no one watching you here, try different values in the editor and see what you get 🧐
 
@@ -101,11 +101,48 @@ Ooof 😨 Calm down... They follow some logic (you don't need to make math every
 
 So, the smaller ones (below 10) are great for finer details, like a button. The bigger ones for moments you need bigger spaces, like between `divs`, etc.
 
-Read the [docs for padding](https://tailwindcss.com/docs/padding) for more.
+Read the [docs for `padding`](https://tailwindcss.com/docs/padding) for more.
 
 ## Roundness
 
-What are you thinking of this? I would love to hear some feedback on what could be improved, made different, etc.
+The great thing of having a set of utilities with values already chosen for you, is that you don't need to think too much on things like *what is the border radius for buttons? Is it `4px` or `3px`?*.
+
+Tailwind got you covered here too. There are six main sizes for `border-radius` (and you can see more options on the docs link below): `rounded-none`, `rounded-sm`, `rounded-md`, `rounded-lg` and `rounded-full`. Pretty simple huh? They just tell you how rounded your element will be.
+
+Make the `button` below have completely rounded corners.
+
+```html live
+<button class="px-4 py-2 text-green-100 bg-green-600">Pointy corners!</button>
+```
+
+<Spoiler>If you went for rounded-full, that's great. If you tried every option, that's better. 🎉</Spoiler>
+
+It looks good now, but there is problem. If you click the button, on Firefox you probably won't see a border around it, but on Chrome there is a giant bold border, and the worst is that it doesn't even follow the element curves.
+
+Let's fix it and make every browser look the same.
+
+Read the [docs for border radius](https://tailwindcss.com/docs/border-radius/) for more.
+
+## Focus
+
+The way to change the default appearence and create a better and standardized look in all browsers when focused, is to use pseudo-class variants.
+
+In Tailwind, you can apply a different style for `focus` by just prepending utility classes with `focus:`. So, to apply a different `background-color` only on focus, you would use something like `focus:bg-purple-400`.
+
+In the case of our `button`, we will combine it with two new properties: `outline-none` will be responsible for removing the default browser outline. But just removing it is very bad for accessibility, so we need to replace it with our own styles. That's when `shadow-outline` comes in. It provides an outline in the form of a shadow, that has the benefit of being accessible AND following the element's curves.
+
+Below, try to combine `focus:` with `outline-none` and `shadow-outline` (it should result in two classes). Try your best and feel free to look at spoilers if you get stuck. The result you're trying to achieve is to get a rounded blue border with reduced opacity when you click the button.
+
+```html live
+<button class="px-4 py-2 text-green-100 bg-green-600 rounded-full">Pointy corners!</button>
+```
+
+<Spoiler>If you added focus:outline-none and focus:shadow-outline, congratulations 🎉 Now our button is starting to look good.</Spoiler>
+
+In this case, `focus` just works as you would expect, but if you get yourself using this pseudo-class and not seeing results, it is because you have to activate the style for the specific utility you're trying to use, and in this case you're better served by the official docs.
+
+Read the [docs for `focus`](https://tailwindcss.com/docs/pseudo-class-variants/#focus) for more.
+
+Read the [docs for `outline-shadow`](https://tailwindcss.com/docs/box-shadow/#focus-outline-shadow) for more.
 
 *More soon. Updates on [@estevanmaito](http://twitter.com/estevanmaito)* 🐤
-        
