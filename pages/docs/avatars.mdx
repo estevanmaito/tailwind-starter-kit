@@ -33,6 +33,31 @@ Group of stacked avatars with white border.
 </div>
 ```
 
+## Avatar group (hoverable)
+
+Group of stacked avatars that expand on hover. Due to a plugin, we can't do a demo in this page, but don't worry, [here's a working demo](https://play.tailwindcss.com/5en4Q10ZHq).
+
+```html
+<div class="flex -space-x-4 hover:-space-x-1">
+  <img class="relative z-30 inline object-cover w-12 h-12 border-2 border-white rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
+  <img class="relative z-20 inline object-cover w-12 h-12 border-2 border-white rounded-full" src="https://images.pexels.com/photos/2955305/pexels-photo-2955305.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
+  <img class="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
+</div>
+```
+
+When you're using this, you'll need this in your `tailwind.config.js`:
+
+```js
+module.exports = {
+  variants: {
+    extend: {
+      gap: ['hover', 'focus'],
+      space: ['hover', 'focus']
+    }
+  }
+}
+```
+
 ## Avatar with badge
 
 Avatar with status badge.
