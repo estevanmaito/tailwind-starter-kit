@@ -7,10 +7,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "@mdx-js/loader": "1.6.1",
+    "@mdx-js/loader": "2.1.5",
     "@mdx-js/react": "1.6.1",
     "@mdx-js/tag": "0.20.3",
-    "next": "9.4.1",
+    "next": "13.0.2",
     "next-mdx-enhanced": "2.5.0",
     "prism-react-renderer": "1.1.0",
     "prismjs": "^1.21.0",
